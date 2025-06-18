@@ -1,0 +1,14 @@
+.button, .btn
+    &:hover, &:focus, &:focus-visible
+        color: var(--color-background)
+        background: var(--btn-hover-background)
+        border: var(--btn-hover-border)
+.button--alt,
+.button-alt // Legacy
+    @extend .button
+    --btn-color: #{$color-background}
+    --btn-background: #{$color-text-alt}
+    --btn-border: #{$btn-border-width} solid var(--btn-background)
+    --btn-hover-color: #{$color-background}
+    --btn-hover-background: #{$btn-hover-background}
+    --btn-hover-border: #{$btn-border-width} solid var(--btn-hover-background)
