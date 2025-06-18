@@ -1,14 +1,14 @@
-.button, .btn
-    &:hover, &:focus, &:focus-visible
-        color: var(--color-background)
-        background: var(--btn-hover-background)
-        border: var(--btn-hover-border)
+.button--accent,
+.button,
 .button--alt,
-.button-alt // Legacy
-    @extend .button
-    --btn-color: #{$color-background}
-    --btn-background: #{$color-text-alt}
-    --btn-border: #{$btn-border-width} solid var(--btn-background)
-    --btn-hover-color: #{$color-background}
-    --btn-hover-background: #{$btn-hover-background}
+.button-alt
+    --btn-font-family: var(--body-font-family)
+
+.button--accent
+    --btn-color: var(--color-text)
+    --btn-background: var(--color-background)
+    --btn-border: #{$btn-border-width} dotted var(--btn-color)
+    --btn-hover-color: var(--color-background)
+    --btn-hover-background: var(--color-accent)
     --btn-hover-border: #{$btn-border-width} solid var(--btn-hover-background)
+    --btn-border-radius: 50px
