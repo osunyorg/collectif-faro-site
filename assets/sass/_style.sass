@@ -27,3 +27,14 @@ header#document-header
                     color: var(--color-accent)
         .active
             color: var(--color-accent)
+
+// HOME
+.page__home
+    .hero
+        .content
+            hgroup
+                h1
+                    @extend .sr-only
+                &.has-lead > p
+                    @include h1
+                    
