@@ -23,6 +23,13 @@ items:
     children: []
   path: "/projects"
   file: content/fr/projects/_index.html
+- title: Index
+  target: "/realisations/"
+  kind: page
+  new_tab: false
+  children: []
+  path: "/projects"
+  file: content/fr/projects/_index.html
 - title: Démarche
   target: "/demarche/"
   kind: page
@@ -37,11 +44,4 @@ items:
   children: []
   path: "/pages/a-propos"
   file: content/fr/pages/a-propos/_index.html
-- title: Index
-  target: "/realisations/"
-  kind: page
-  new_tab: false
-  children: []
-  path: "/projects"
-  file: content/fr/projects/_index.html
 
