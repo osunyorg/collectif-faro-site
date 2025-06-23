@@ -8,4 +8,18 @@ items:
   children: []
   path: "/projects"
   file: content/fr/projects/_index.html
+- title: Démarche
+  target: "/demarche/"
+  kind: page
+  new_tab: false
+  children: []
+  path: "/pages/demarche"
+  file: content/fr/pages/demarche/_index.html
+- title: À propos
+  target: "/a-propos/"
+  kind: page
+  new_tab: false
+  children: []
+  path: "/pages/a-propos"
+  file: content/fr/pages/a-propos/_index.html
 
