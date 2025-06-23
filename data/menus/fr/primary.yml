@@ -5,7 +5,22 @@ items:
   target: "/realisations/"
   kind: page
   new_tab: false
-  children: []
+  children:
+  - title: Construire l'espace habité
+    target: "/realisations/chapitres/construire-lespace-habite"
+    kind: url
+    new_tab: false
+    children: []
+  - title: Penser l'urbain
+    target: "/realisations/chapitres/penser-lurbain"
+    kind: url
+    new_tab: false
+    children: []
+  - title: Produire des connaissances
+    target: "/realisations/chapitres/produire-des-connaissances"
+    kind: url
+    new_tab: false
+    children: []
   path: "/projects"
   file: content/fr/projects/_index.html
 - title: Démarche
@@ -22,4 +37,11 @@ items:
   children: []
   path: "/pages/a-propos"
   file: content/fr/pages/a-propos/_index.html
+- title: Index
+  target: "/realisations/"
+  kind: page
+  new_tab: false
+  children: []
+  path: "/projects"
+  file: content/fr/projects/_index.html
 
