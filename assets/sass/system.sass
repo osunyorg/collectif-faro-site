@@ -1,0 +1,46 @@
+// HEADER
+header#document-header
+    .logo + figcaption
+        @include h3
+    &:not(.is-sticky)
+        .logo + figcaption
+            @extend .sr-only
+    &.is-sticky
+        .logo img
+            @extend .sr-only
+    .primary-menu
+        .dropdown-menu
+            .nav-level-2
+                @include grid(3, md)
+                a
+                    @include h2
+                    text-align: center
+        .nav-level-1 > li
+            a:hover
+                color: var(--color-accent)
+            &:not(.has-children) .active
+                color: var(--color-accent)
+
+// FOOTER
+footer#document-footer
+    .footer-legals
+        .nav-legal
+            display: flex
+            gap: space(5)
+            li
+                margin-top: 0px
+    //@include media-breakpoint-up(deskstop)
+        //.container
+            //display: flex
+            //justify-content: center
+
+// BUTTON
+.button
+    &--accent,
+    &--alt
+        --btn-color: var(--color-text)
+        --btn-background: var(--color-background)
+        --btn-border: #{$btn-border-width} dotted var(--btn-color)
+        --btn-hover-color: var(--color-background)
+        --btn-hover-background: var(--color-accent)
+        --btn-hover-border: #{$btn-border-width} solid var(--btn-hover-background)

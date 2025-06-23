@@ -18,13 +18,16 @@ $color-radiant-background: linear-gradient(180deg, rgba(240, 235, 235, 0) 0%, #F
 $body-font-family: "Rubik"
 $heading-font-family: "Faro"
 
+// body
+$body-weight: 300
+
 // h1
 $h1-size-desktop: pxToRem(52)
 $h1-line-height-desktop: pxToRem(56)
 
 // h2
 $h2-size-desktop: pxToRem(43)
-$h2-line-height-desktop: pxToRem(46)
+$h2-line-height-desktop: 180%
 
 // h3
 $h3-size-desktop: pxToRem(30)
@@ -39,11 +42,13 @@ $h4-size: $h4-size-desktop
 $h4-line-height: $h4-line-height-desktop
 
 // Lead
-$lead-font-family: $body-font-family
-$lead-size-desktop: pxToRem(26)
-$lead-line-height-desktop: pxToRem(35)
-$lead-size: pxToRem(21)
-$lead-line-height: pxToRem(32)
+
+$lead-hero-font-family: $body-font-family
+$lead-hero-size: pxToRem(21)
+$lead-hero-size-desktop: pxToRem(26)
+$lead-hero-line-height: pxToRem(32)
+$lead-hero-line-height-desktop: pxToRem(35)
+$lead-hero-weight: 300
 
 // Body
 $body-size-desktop: pxToRem(20)
@@ -64,11 +69,13 @@ $quote-line-height-desktop: pxToRem(42)
 // COMPONENTS
 // Button
 $btn-font-family: $body-font-family
+$btn-border-radius: pxToRem(50)
 
 // header
 $header-background: none
 $header-border-bottom-width: 0
 $header-logo-height-desktop: 100px
+$header-dropdown-full: true
 
 // hero
 $hero-background-color: none
