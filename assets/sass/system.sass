@@ -23,12 +23,25 @@ header#document-header
 
 // FOOTER
 footer#document-footer
+    display: flex
+    padding-bottom: 0
+    border-bottom: 5px solid var(--color-text)
+    .container:first-child
+        order: 1
+        padding-bottom: 0px
+        margin-bottom: -5px
+    .container:last-child
+        margin-bottom: space(2)
     .footer-legals
         .nav-legal
             display: flex
+            position: relative
             gap: space(5)
             li
                 margin-top: 0px
+        .footer-credit
+            display: none
+            
     //@include media-breakpoint-up(deskstop)
         //.container
             //display: flex
