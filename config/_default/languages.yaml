@@ -9,6 +9,12 @@ fr:
   buildFuture: true
   params:
     contact_details:
+      emails:
+        email:
+          label: >-
+            contact@collectif-faro.fr
+          value: >-
+            mailto:contact@collectif-faro.fr
 
   taxonomies:
     administrator: administrators
