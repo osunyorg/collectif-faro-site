@@ -23,18 +23,16 @@ header#document-header
 
 // FOOTER
 footer#document-footer
-    @include media-breakpoint-down(desktop)
-        border-bottom: 3px solid var(--color-text)
-        display: flex
-        margin-top: 0
-        padding-top: $spacing-6
     padding-top: space(100)
     padding-bottom: 0
     border-bottom: 5px solid var(--color-text)
+    @include media-breakpoint-down(desktop)
+        border-bottom: 3px solid var(--color-text)
+        display: flex
+        padding-top: $spacing-6
     .container:first-child //Logo
         @include media-breakpoint-down(desktop)
             align-self: end
-            margin-top: 0
         .footer-logo
             @include media-breakpoint-up(desktop)
                 padding-bottom: 0
