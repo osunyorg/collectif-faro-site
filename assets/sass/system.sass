@@ -10,10 +10,10 @@ header#document-header
             @extend .sr-only
     .primary-menu
         padding-top: space(5)
-        padding-bottom: $spacing-6
+        padding-bottom: space(4)
         .dropdown-menu
             position: absolute
-            top: space(40)
+            padding-top: space(40)
             .nav-level-2
                 @include grid(3, md)
                 a
@@ -32,6 +32,7 @@ header#document-header
                     left: 50%
                     top: space(5)
                     transform: translateX(-50%)
+                    z-index: 1000
             #navigation
                 width: columns(12)
                 li:nth-of-type(2)
