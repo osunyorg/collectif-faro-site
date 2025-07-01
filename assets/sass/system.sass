@@ -9,6 +9,8 @@ header#document-header
         .logo img
             @extend .sr-only
     .primary-menu
+        padding-top: space(5)
+        padding-bottom: space(4)
         .dropdown-menu
             .nav-level-2
                 @include grid(3, md)
@@ -21,7 +23,21 @@ header#document-header
                 color: var(--color-accent)
             &:not(.has-children) .active
                 color: var(--color-accent)
-
+        .container
+            figure
+                @include media-breakpoint-up(desktop)
+                    position: absolute
+                    left: 50%
+                    top: space(5)
+                    transform: translateX(-50%)
+            #navigation
+                width: columns(12)
+                li:nth-of-type(2)
+                    margin-right: auto
+                .has-children
+                    a
+                        padding-left: 0
+                
 // FOOTER
 footer#document-footer
     padding-top: space(100)
