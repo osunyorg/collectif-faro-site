@@ -40,7 +40,10 @@ footer#document-footer
                 position: absolute
                 bottom: 0%
                 left: 50%
-                transform: translateX(-50%)                
+                transform: translateX(-50%)
+            img
+                @include media-breakpoint-down(desktop)
+                    height: space(25)
         .footer-site
             @include media-breakpoint-down(desktop)
                 margin-top: -3px
