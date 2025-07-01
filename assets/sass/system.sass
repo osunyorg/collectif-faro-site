@@ -10,8 +10,10 @@ header#document-header
             @extend .sr-only
     .primary-menu
         padding-top: space(5)
-        padding-bottom: space(4)
+        padding-bottom: $spacing-6
         .dropdown-menu
+            position: absolute
+            top: space(40)
             .nav-level-2
                 @include grid(3, md)
                 a
@@ -37,7 +39,7 @@ header#document-header
                 .has-children
                     a
                         padding-left: 0
-                
+
 // FOOTER
 footer#document-footer
     padding-top: space(100)
