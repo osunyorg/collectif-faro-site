@@ -15,6 +15,7 @@ header#document-header
                 a
                     @include h2
                     text-align: center
+                    text-decoration: none
         .nav-level-1 > li
             a:hover
                 color: var(--color-accent)
@@ -47,7 +48,7 @@ footer#document-footer
         .footer-site
             @include media-breakpoint-down(desktop)
                 margin-top: -3px
-    .container:last-child 
+    .container:last-child
         @include media-breakpoint-down(desktop)
             display: flex
             flex-direction: column-reverse
