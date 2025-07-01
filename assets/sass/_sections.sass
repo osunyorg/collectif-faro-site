@@ -1,0 +1,44 @@
+// Page Index
+.projects__section
+    .document-content
+        color: var(--color-text-alt)
+        @include meta
+        .project-list-header
+            display: flex
+            list-style: none
+            justify-content: space-between
+            padding: 0 var(--grid-gutter)
+            #index-title
+                width: columns(5)
+            #index-type
+                width: columns(2)
+            #index-year
+                width: columns(1)
+                display: flex
+                justify-content: flex-end
+        ol
+            list-style: none
+            padding-left: var(--grid-gutter-negative)
+            #index-list
+                justify-content: space-evenly
+                border-top: 1px dotted var(--color-text-alt)
+                &:hover
+                    background-color: var(--color-accent)
+                    a
+                        color: var(--color-background)
+                .project-link
+                    display: flex
+                    text-decoration: none
+                    justify-content: space-evenly
+                    #index-title, #index-type, #index-year
+                        margin: $spacing-2 0
+                    #index-title
+                        @include h4
+                        width: columns(5)
+                    #index-type
+                        width: columns(2)
+                    #index-year
+                        width: columns(1)
+                        display: flex
+                        justify-content: flex-end
+

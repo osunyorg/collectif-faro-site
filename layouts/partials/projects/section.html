@@ -9,13 +9,41 @@
 
 
     {{/*  TODO: set index projects as table  */}}
+    <div class="project-list-header">
+      <div id="index-title">Nom du projet</div>
+      <div id="index-type">Type</div>
+      <div id="index-type">Domaine</div>
+      <div id="index-type">Lieu</div>
+      <div id="index-year">Date</div>
+    </div>
+
+    <ol class="project-list">
+      {{ range .Pages }}
+        <li id="index-list">
+          <a href="{{ .RelPermalink }}" class="project-link">
+            <div id="index-title">
+                {{ .Title }}
+            </div>
+            <div id="index-type">
+                {{ .Params.year }}
+            </div>
+            <div id="index-type">
+                {{ .Params.year }}
+            </div>
+            <div id="index-type">
+                {{ .Params.Subtitle }}
+            </div>
+            <div id="index-year">
+                {{ .Params.year }}
+            </div>
+          </a>
+        </li>
+      {{ end }}
+    </ol>
+
+    {{/* Display the contents list only on the first page */}}
 
     {{ if (partial "IsFirstPage" .) }}
       {{ partial "contents/list.html" . }}
     {{ end }}
-  
-  <div class="container">
-    {{ partial "projects/partials/projects.html" . }}
-    {{ partial "commons/pagination.html" . }}
-  </div>
 </div>
