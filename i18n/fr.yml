@@ -1,2 +1,8 @@
 header:
   title: Faro Architectes
+
+projects:
+  index:
+    header:
+      title: Nom du projet
+      type: Type
