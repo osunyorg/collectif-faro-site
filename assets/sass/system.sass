@@ -12,8 +12,6 @@ header#document-header
         padding-top: space(5)
         padding-bottom: space(4)
         .dropdown-menu
-            position: absolute
-            padding-top: space(40)
             .nav-level-2
                 @include grid(3, md)
                 a
@@ -40,6 +38,8 @@ header#document-header
                 .has-children
                     a
                         padding-left: 0
+        html.has-menu-opened &
+            background: $color-background
 
 // FOOTER
 footer#document-footer
