@@ -6,3 +6,6 @@ projects:
     header:
       title: Nom du projet
       type: Type
+      domaine: Domaine
+      location: Lieu
+      date: Date
