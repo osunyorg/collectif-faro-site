@@ -5,7 +5,6 @@
         .actions
             a:first-child
                 @extend .button--accent
-
     @include in-page-without-sidebar
         .block-content
             justify-content: center
@@ -22,3 +21,16 @@
                     .description
                         max-width: 100%
                         margin-bottom: space(8)
+
+.block-categories--grid
+    .block-content
+        .category-item
+            .category-content
+                order: -1
+                text-align: center
+                text-wrap: balance
+                margin-bottom: space(5)
+            .media
+                img
+                    aspect-ratio: 1.36/1
+                    object-fit: cover
