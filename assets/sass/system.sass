@@ -12,12 +12,24 @@ header#document-header
         padding-top: space(5)
         padding-bottom: space(4)
         .dropdown-menu
+            padding-bottom: space(4)
             .nav-level-2
                 @include grid(3, md)
+                align-items: end
+                li
+                    margin-left: auto
+                    margin-right: auto
                 a
                     @include h2
                     text-align: center
                     text-decoration: none
+                li:nth-of-type(2)
+                    max-width: columns(2)
+                    text-wrap: balance
+                li:nth-of-type(1)
+                    max-width: columns(4)
+                    text-wrap: balance
+
         .nav-level-1 > li
             a:hover
                 color: var(--color-accent)
