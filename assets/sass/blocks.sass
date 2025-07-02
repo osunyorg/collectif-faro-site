@@ -1,7 +1,24 @@
-.block-call_to_action 
-    .call_to_action 
+.block-call_to_action
+    .call_to_action
         .description p
             @include lead-hero
         .actions
             a:first-child
                 @extend .button--accent
+
+    @include in-page-without-sidebar
+        .block-content
+            justify-content: center
+            .call_to_action--without-image:not(.call_to_action--without-text)
+                > div
+                    display: flex
+                    flex-direction: column
+                    margin: auto
+                    max-width: columns(10)
+                    align-items: center
+                    text-align: center
+                    .block-title
+                        margin-bottom: $spacing-3
+                    .description
+                        max-width: 100%
+                        margin-bottom: space(8)
