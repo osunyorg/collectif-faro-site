@@ -112,3 +112,29 @@ footer#document-footer
         --btn-hover-color: var(--color-background)
         --btn-hover-background: var(--color-accent)
         --btn-hover-border: #{$btn-border-width} solid var(--btn-hover-background)
+
+
+.hero
+    @include media-breakpoint-up(desktop)
+        .content
+            .hero-text
+                width: 100%
+                .has-lead
+                    display: flex
+                    h1
+                        @include h2
+                        width: columns(6)
+                        padding-right: offset(1)
+                    p
+                        margin: 0px
+                        width: columns(7)
+            figure
+                width: 100%
+                margin-top: space(8)
+                img
+                    aspect-ratio:  78/35
+                    object-fit: cover
+        &--with-image
+            .content
+                display: flex
+                flex-direction: column

@@ -33,4 +33,35 @@
             .media
                 img
                     aspect-ratio: 1.36/1
-                    object-fit: cover
+
+.block-persons
+    &.block-with-long-text
+        .persons
+            padding-bottom: space(8)
+            border-bottom: 1px dotted var(--color-text-alt)
+            .person
+                margin-bottom: space(25)
+                .person-name
+                    @include h3
+                .person-role
+                    p
+                        max-width: 91%
+
+.block-chapter
+    .block-content
+        .chapter
+            margin-bottom: space(25)
+            .top
+                margin-bottom: $spacing-3
+                .block-title
+                    @include h4
+
+.block-organizations
+    .block-content
+        .top
+            .block-title
+                @include h4
+        .organizations
+            .organization
+                .media--logo
+                    background: none
