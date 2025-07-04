@@ -24,15 +24,21 @@
 
 .block-categories--grid
     .block-content
-        .category-item
-            .category-content
-                order: -1
-                text-align: center
-                text-wrap: balance
-                margin-bottom: space(5)
-            .media
-                img
-                    aspect-ratio: 1.36/1
+        li
+            .category-item
+                .category-content
+                    order: -1
+                    text-align: center
+                    text-wrap: balance
+                    margin-bottom: space(5)
+                .media
+                    img
+                        aspect-ratio: 1.36/1
+
+            .category-item:nth-child(2)
+                .category-content
+                    max-width: 10%
+
 
 .block-persons
     &.block-with-long-text
