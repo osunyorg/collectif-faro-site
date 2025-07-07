@@ -26,20 +26,21 @@
 // categories
 .block-categories
     &--grid
-        .block-content
-            li
-                .category-item
-                    height: 100%
-                    .category-content
-                        order: -1
-                        text-align: center
-                        + .media
-                            padding-top: space(5)
-                    .media
-                        margin-bottom: 0
-                        margin-top: auto
-                        img
-                            aspect-ratio: 507/372
+        .category-item
+            height: 100%
+            .category-content
+                order: -1
+                text-align: center
+                + .media
+                    padding-top: space(5)
+            &:hover
+                [class$="-title"] a
+                    color: var(--color-accent)
+            .media
+                margin-bottom: 0
+                margin-top: auto
+                img
+                    aspect-ratio: 507/372
 
 // persons
 .block-persons
