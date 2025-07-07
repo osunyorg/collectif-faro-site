@@ -1,8 +1,14 @@
 // HEADER
 header#document-header
-    .logo + figcaption
-        @include h3
+    // TODO: use display none for mobile (adapt project section after this modification)
+    .logo
+        @include stretched-link 
+        + figcaption
+            @include h3
+            line-height: 1
     &:not(.is-sticky)
+        figure
+            top: space(5)
         .logo + figcaption
             @extend .sr-only
     &:not(.is-sticky)
@@ -43,7 +49,6 @@ header#document-header
                 @include media-breakpoint-up(desktop)
                     position: absolute
                     left: 50%
-                    top: space(5)
                     transform: translateX(-50%)
                     z-index: 1000
             #navigation

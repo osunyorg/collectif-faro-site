@@ -8,11 +8,24 @@
                 &.has-lead > p
                     @include h1
     @include media-breakpoint-up(desktop)
-    &.full-width
-        main > .document-content .blocks
-            --block-space-y: #{space(34)}
+        &.full-width
+            main > .document-content .blocks
+                --block-space-y: #{space(34)}
 
 // projects
+.projects__section,
+.projects__page
+    .taxonomy-categories,
+    .taxonomies-single
+        display: flex
+        flex-wrap: wrap
+        gap: $spacing-1 $spacing-2
+        li a
+            @extend .btn
+            @extend .button--small
+            @extend .button--accent
+            line-height: 1
+
 .projects__section
     .document-content
         color: var(--color-text-alt)
@@ -55,9 +68,68 @@
                         width: columns(1)
                         display: flex
                         justify-content: flex-end
-    .taxonomy-categories
-        li a
-            @extend .btn
-            @extend .button--small
-            @extend .button--accent
-
+.projects__page
+    .hero
+        hgroup
+            h1 span
+                @include body-text
+                color: var(--color-text)
+                font-weight: 300
+        @include media-breakpoint-up(desktop)
+            &, .content
+                padding-top: 0
+                figure
+                    margin-top: 0
+            .container
+                padding: 0
+            .hero-text
+                @include container
+                padding-left: calc(#{offset(2)} + var(--grid-gutter))
+                hgroup
+                    flex-direction: column
+                    width: columns(7)
+                h1 
+                    display: flex
+                    align-items: baseline
+                    span
+                        position: absolute
+                        right: var(--grid-gutter)
+                    + p
+                        margin-top: $spacing-2 !important
+                .taxonomies-single
+                    margin: 0
+            figure
+                order: -1
+                width: 100%
+    .document-content
+        .project-sidebar
+            display: none
+        .block-siblings-navigation
+            display: none
+        @include media-breakpoint-up(desktop)
+            &:not(.full-width)
+                .blocks    
+                    .block-content
+                        padding-left: offset(2)
+                        padding-right: offset(2)
+    @include media-breakpoint-up(desktop)
+        html:not(.has-menu-opened) &
+            #document-header:not(.sticky) 
+                background-color: $header-sticky-background
+                figure
+                    top: unset
+                .logo
+                    img
+                        display: none
+                    + figcaption
+                        display: block
+                        border: 0 !important
+                        clip: unset !important
+                        clip-path: unset !important
+                        height: auto !important
+                        overflow: unset !important
+                        padding: unset !important
+                        margin: unset !important
+                        position: static !important
+                        width: unset !important
+                        white-space: unset !important
