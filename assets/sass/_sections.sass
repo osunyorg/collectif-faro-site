@@ -1,4 +1,18 @@
-// Page Index
+// home
+.page__home
+    .hero
+        .content
+            hgroup
+                h1
+                    @extend .sr-only
+                &.has-lead > p
+                    @include h1
+    @include media-breakpoint-up(desktop)
+    &.full-width
+        main > .document-content .blocks
+            --block-space-y: #{space(34)}
+
+// projects
 .projects__section
     .document-content
         color: var(--color-text-alt)
@@ -41,16 +55,9 @@
                         width: columns(1)
                         display: flex
                         justify-content: flex-end
-
-
-.projects__section
-    .section-taxonomies-container
-        .taxonomies-list--inline
-            .taxonomy-categories
-                ul
-                    li
-                        a
-                            @extend .btn
-                            @extend .button--small
-                            @extend .button--accent
+    .taxonomy-categories
+        li a
+            @extend .btn
+            @extend .button--small
+            @extend .button--accent
 

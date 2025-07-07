@@ -5,6 +5,8 @@ header#document-header
     &:not(.is-sticky)
         .logo + figcaption
             @extend .sr-only
+    &:not(.is-sticky)
+        background: transparent
     &.is-sticky
         .logo img
             @extend .sr-only
@@ -12,24 +14,25 @@ header#document-header
         padding-top: space(5)
         padding-bottom: space(4)
         .dropdown-menu
-            padding-bottom: space(4)
-            .nav-level-2
-                @include grid(3, md)
-                align-items: end
-                li
-                    margin-left: auto
-                    margin-right: auto
-                a
-                    @include h2
-                    text-align: center
-                    text-decoration: none
-                li:nth-of-type(2)
-                    max-width: columns(2)
-                    text-wrap: balance
-                li:nth-of-type(1)
-                    max-width: columns(4)
-                    text-wrap: balance
-
+            @include media-breakpoint-up(desktop)
+                padding-bottom: space(4)
+                padding-top: $spacing-6
+                .nav-level-2
+                    @include grid(3, md)
+                    align-items: end
+                    li
+                        margin-left: auto
+                        margin-right: auto
+                    a
+                        @include h2
+                        text-align: center
+                        text-decoration: none
+                    li:nth-of-type(2)
+                        max-width: columns(2)
+                        text-wrap: balance
+                    li:nth-of-type(1)
+                        max-width: columns(4)
+                        text-wrap: balance
         .nav-level-1 > li
             a:hover
                 color: var(--color-accent)
@@ -52,6 +55,10 @@ header#document-header
                         padding-left: 0
         html.has-menu-opened &
             background: $color-background
+    @include media-breakpoint-up(desktop)
+        html.has-menu-opened &:not(.is-sticky)
+            > nav
+                height: calc(#{$header-logo-height-desktop} + #{space(5)})
 
 // FOOTER
 footer#document-footer
@@ -102,6 +109,15 @@ footer#document-footer
             @include media-breakpoint-down(desktop)
                 align-self: flex-end
 
+// MAIN
+main
+    background:
+        image: $header-radiant-background
+        repeat: no-repeat
+        size: 100% $hero-height
+    @include media-breakpoint-up(desktop)
+        background-size: 100% pxToRem(546)
+
 // BUTTON
 .button
     &--accent,
@@ -113,7 +129,7 @@ footer#document-footer
         --btn-hover-background: var(--color-accent)
         --btn-hover-border: #{$btn-border-width} solid var(--btn-hover-background)
 
-
+// HERO
 .hero
     @include media-breakpoint-up(desktop)
         .content
@@ -138,3 +154,14 @@ footer#document-footer
             .content
                 display: flex
                 flex-direction: column
+        .projects__section &,
+        .page__home &
+            .content
+                width: columns(8)
+                margin: auto
+                .hero-text
+                    width: 100%
+                    h1, hgroup
+                        text-align: center
+                        p
+                            width: 100%

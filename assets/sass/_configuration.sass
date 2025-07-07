@@ -3,7 +3,6 @@ $color-accent: #FC0D1B
 $color-text: #3F0303
 $color-text-alt: #9D6A53
 $color-background: #FFFFFF
-$color-background-brown: #F0EBEB
 $color-background-alt: #F4FAFA
 $color-border: rgba(0, 0, 0, 0.30)
 $color-selection: $color-background
@@ -11,7 +10,8 @@ $color-selection-background: rgba($color-text, .7)
 
 // New colors
 $color-background-brown: #F0EBEB
-$color-radiant-background: linear-gradient(180deg, rgba(240, 235, 235, 0) 0%, #F0EBEB 39.09%)
+$footer-radiant-background: linear-gradient(180deg, rgba(240, 235, 235, 0) 0%, $color-background-brown 39.09%)
+$header-radiant-background: linear-gradient(0deg, rgba(240, 235, 235, 0) 0%, $color-background-brown 39.09%)
 
 //TYPOGRAPHY
 // Fonts family
@@ -93,7 +93,7 @@ $hero-background-color: none
 $hero-height-desktop: 0 // Index page
 
 // footer
-$footer-background-color: $color-radiant-background
+$footer-background-color: $footer-radiant-background
 $footer-logo-height-desktop: 180px
 $footer-logo-height: 110px
 

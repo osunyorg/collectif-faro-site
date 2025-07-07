@@ -1,25 +1,3 @@
 // TYPOGRAPHY
 body
     font-weight: $body-weight
-
-
-// HOME
-.page__home
-    .hero
-        .content
-            hgroup
-                h1
-                    @extend .sr-only
-                &.has-lead > p
-                    @include h1
-
-.projects__section,
-.page__home
-    .hero
-        .content
-            width: columns(8)
-            margin: auto
-            .hero-text
-                width: 100%
-                h1, hgroup
-                    text-align: center

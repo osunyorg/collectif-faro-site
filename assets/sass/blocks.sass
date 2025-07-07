@@ -1,3 +1,4 @@
+// call to action
 .block-call_to_action
     .call_to_action
         .description p
@@ -22,25 +23,25 @@
                         max-width: 100%
                         margin-bottom: space(8)
 
-.block-categories--grid
-    .block-content
-        li
-            .category-item
-                .category-content
-                    order: -1
-                    text-align: center
-                    text-wrap: balance
-                    margin-bottom: space(5)
-                .media
-                    img
-                        aspect-ratio: 1.36/1
-            &:nth-child(2)
+// categories
+.block-categories
+    &--grid
+        .block-content
+            li
                 .category-item
+                    height: 100%
                     .category-content
-                        max-width: 40%
-                        margin-left: auto
-                        margin-right: auto
+                        order: -1
+                        text-align: center
+                        + .media
+                            padding-top: space(5)
+                    .media
+                        margin-bottom: 0
+                        margin-top: auto
+                        img
+                            aspect-ratio: 507/372
 
+// persons
 .block-persons
     &.block-with-long-text
         .persons
@@ -53,7 +54,7 @@
                 .person-role
                     p
                         max-width: 91%
-
+// chapter
 .block-chapter
     .block-content
         .chapter
@@ -67,6 +68,41 @@
                     font-weight: $regular
                     margin-top: $spacing-4
 
+// projects
+.block-projects
+    &--alternate
+        .project
+            .media img
+                aspect-ratio: 638/468
+                object-fit: cover
+        // TODO: remove 'has' when everything is online
+        .project:has(.media:not(:empty))
+            .project-content
+                background-color: $color-background-brown
+                bottom: 0
+                left: 0
+                opacity: 0
+                position: absolute
+                top: 0
+                transition: opacity 0.3s ease
+                right: 0
+                z-index: 2
+                .project-description
+                    display: flex
+                    flex-direction: column
+                    align-items: center
+                    justify-content: center
+                    padding: $spacing-3
+            .media
+                z-index: 1
+            &:hover .project-content
+                opacity: 1
+        @include media-breakpoint-up(desktop)
+            padding: 0 columns(1)
+            .project
+                width: columns(5)
+
+// organizations
 .block-organizations
     .block-content
         .block-title
@@ -79,6 +115,7 @@
                 background: none
                 padding: 24px 0
 
+// image
 .block-image
     @include in-page-with-sidebar
         &.image-landscape,

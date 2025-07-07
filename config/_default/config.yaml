@@ -14,3 +14,10 @@ params:
         display: true
         layout: inline
         show_name: false
+  image_sizes:
+    sections:
+      categories:
+        hero:
+          desktop:  1880
+        hero_term:
+          desktop:  1880
