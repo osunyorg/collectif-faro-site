@@ -35,6 +35,8 @@
             list-style: none
             justify-content: space-between
             padding: 0 var(--grid-gutter)
+            @include media-breakpoint-down(desktop)
+                display: none
             #index-title
                 width: columns(5)
             #index-type
@@ -43,12 +45,32 @@
                 width: columns(1)
                 display: flex
                 justify-content: flex-end
+        .project-list
+            border-top: 1px dotted var(--color-text-alt)
+        .section-taxonomies-container
+            .taxonomies-list
+                display: flex
+                justify-content: center
+                @include media-breakpoint-down(desktop)
+                    flex-direction: columns
+                    display: flex
+                    align-items: center
+                .taxonomy-categories
+                    ul
+                        display: flex
+                        @include media-breakpoint-down(desktop)
+                            flex-direction: column
+                            display: flex
+                        li
+                            margin-right: $spacing-2
+                            @include media-breakpoint-down(desktop)
+                                margin-bottom: $spacing-2
         ol
             list-style: none
             padding-left: var(--grid-gutter-negative)
             #index-list
                 justify-content: space-evenly
-                border-top: 1px dotted var(--color-text-alt)
+                border-bottom: 1px dotted var(--color-text-alt)
                 &:hover
                     background-color: var(--color-accent)
                     a
@@ -57,17 +79,37 @@
                     display: flex
                     text-decoration: none
                     justify-content: space-evenly
-                    #index-title, #index-type, #index-year
+                    @include media-breakpoint-down(desktop)
+                        display: flex
+                        flex-direction: column
+                        margin: 0 20px
+                    #index-title,
+                    #index-type,
+                    #index-year
                         margin: $spacing-2 0
                     #index-title
                         @include h4
                         width: columns(5)
+                        @include media-breakpoint-down(desktop)
+                            width: 100%
+                            margin-bottom: $spacing-1
                     #index-type
                         width: columns(2)
+                        @include media-breakpoint-down(desktop)
+                            width: 100%
+                            margin-bottom: $spacing-1
+                            margin-top: 0
                     #index-year
                         width: columns(1)
                         display: flex
                         justify-content: flex-end
+                        @include media-breakpoint-down(desktop)
+                            justify-content: start
+                            width: 100%
+                            margin-bottom: $spacing-1
+                            margin-top: 0
+
+
 .projects__page
     .hero
         hgroup
@@ -133,5 +175,3 @@
                         position: static !important
                         width: unset !important
                         white-space: unset !important
-
-

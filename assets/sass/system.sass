@@ -2,7 +2,7 @@
 header#document-header
     // TODO: use display none for mobile (adapt project section after this modification)
     .logo
-        @include stretched-link 
+        @include stretched-link
         + figcaption
             @include h3
             line-height: 1
@@ -136,6 +136,13 @@ main
 
 // HERO
 .hero
+    @include media-breakpoint-down(desktop)
+        min-height: $spacing-1
+        .projects__section &
+            .hero-text
+                h1, hgroup
+                    display: flex
+                    justify-content: center
     @include media-breakpoint-up(desktop)
         .content
             .hero-text
