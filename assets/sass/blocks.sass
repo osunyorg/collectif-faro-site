@@ -58,6 +58,8 @@
 .block-chapter
     .block-content
         width: columns(10)
+        @include media-breakpoint-down(desktop)
+            width: 95%
         .chapter
             margin-bottom: space(25)
             .top
