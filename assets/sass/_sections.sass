@@ -88,7 +88,7 @@
                 hgroup
                     flex-direction: column
                     width: columns(7)
-                h1 
+                h1
                     display: flex
                     align-items: baseline
                     span
@@ -108,13 +108,13 @@
             display: none
         @include media-breakpoint-up(desktop)
             &:not(.full-width)
-                .blocks    
+                .blocks
                     .block-content
                         padding-left: offset(2)
                         padding-right: offset(2)
     @include media-breakpoint-up(desktop)
         html:not(.has-menu-opened) &
-            #document-header:not(.sticky) 
+            #document-header:not(.sticky)
                 background-color: $header-sticky-background
                 figure
                     top: unset
@@ -133,3 +133,5 @@
                         position: static !important
                         width: unset !important
                         white-space: unset !important
+
+
