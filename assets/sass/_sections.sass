@@ -112,11 +112,15 @@
 
 .projects__page
     .hero
-        hgroup
-            h1 span
-                @include body-text
-                color: var(--color-text)
-                font-weight: 300
+        .hero-text
+            h1
+                width: columns(7)
+                @include media-breakpoint-down(desktop)
+                    width: 100%
+                span
+                    @include body-text
+                    color: var(--color-text)
+                    font-weight: 300
         @include media-breakpoint-up(desktop)
             &, .content
                 padding-top: 0
@@ -146,6 +150,11 @@
     .document-content
         .project-sidebar
             display: none
+        .block-image
+            .block-content
+                picture
+                    margin: 0
+                    width: columns(8)
         .block-siblings-navigation
             display: none
         @include media-breakpoint-up(desktop)
@@ -175,6 +184,16 @@
                         position: static !important
                         width: unset !important
                         white-space: unset !important
+        &:not(.full-width)
+        .block-gallery
+            .gallery
+                @include grid(2)
+                figure
+                    button
+                        width: 100%
+                    img
+                        aspect-ratio: 1.36/1
+                        object-fit: cover
 
 .projects_categories__term
     .document-content
@@ -183,7 +202,7 @@
             .media
                 img
                     aspect-ratio: 1.36/1
-                    object-fit :cover
+                    object-fit: cover
             .project-content
                 .project-meta
                     time
