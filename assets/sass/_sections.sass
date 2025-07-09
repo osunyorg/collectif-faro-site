@@ -175,3 +175,23 @@
                         position: static !important
                         width: unset !important
                         white-space: unset !important
+
+.projects_categories__term
+    .document-content
+        .projects--grid
+            grid-template-columns: repeat(3, 1fr)
+            .media
+                img
+                    aspect-ratio: 1.36/1
+                    object-fit :cover
+            .project-content
+                .project-meta
+                    time
+                        color: $color-text
+                hgroup
+                    color: $color-text
+                    h2
+                        @include h4
+                    .project-subtitle
+                        @include meta
+                        color: $color-text

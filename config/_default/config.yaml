@@ -16,6 +16,13 @@ params:
         display: true
         layout: inline
         show_name: false
+      options:
+        categories: false
+        image: true
+        subtitle: true
+        summary: false
+        year: true
+
     share_links:
       enabled: false
     single:
