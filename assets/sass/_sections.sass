@@ -17,12 +17,15 @@
 .projects__page
     .taxonomies-list--inline
         @include grid(1)
+    .taxonomy-categories
+        justify-content: center
     .taxonomy-categories,
     .taxonomies-single
         display: flex
         flex-wrap: wrap
-        justify-content: center
-        gap: $spacing-1 $spacing-2
+        gap: $spacing-2 space()
+        @include media-breakpoint-up(desktop)
+            gap: $spacing-1 $spacing-2
         li a
             @extend .btn
             @extend .button--small
@@ -190,6 +193,7 @@
 .projects__page
     .hero
         .hero-text
+            padding-bottom: 0
             h1
                 width: columns(7)
                 @include media-breakpoint-down(desktop)
@@ -199,6 +203,7 @@
                     color: var(--color-text)
                     font-weight: 300
         @include media-breakpoint-up(desktop)
+            margin-bottom: 0
             &.hero--with-image, .content
                 padding-top: 0
                 figure
@@ -262,15 +267,31 @@
                         width: unset !important
                         white-space: unset !important
         &:not(.full-width)
-        .block-gallery
-            .gallery
-                @include grid(2)
-                figure
-                    button
-                        width: 100%
-                    img
-                        aspect-ratio: 1.36/1
-                        object-fit: cover
+            .block-gallery--grid
+                .gallery
+                    @include grid(2)
+                    figure
+                        button
+                            width: 100%
+                        img
+                            aspect-ratio: 1.36/1
+                            object-fit: cover
+    .block-image.image-landscape,
+    .block-gallery--large
+        figure
+            margin-bottom: var(--grid-gutter) !important
+    .block-gallery, 
+    .block-image
+        margin-bottom: var(--grid-gutter)
+        figcaption
+            @include meta
+            .credit
+                color: var(--color-text-alt)
+    .block-gallery + .block-image,
+    .block-image + .block-gallery,
+    .block-gallery + .block-gallery,
+    .block-image + .block-image
+        margin-top: 0
 
 .projects_categories__term
     .document-content

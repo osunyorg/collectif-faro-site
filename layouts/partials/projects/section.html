@@ -41,14 +41,14 @@
               </td>
               <td>
                 {{ with $project_type }}
-                  <a href="{{ .RelPermalink }}" class="project-link">{{ .name }}</a>
+                  <a href="{{ .permalink }}" class="project-link">{{ .name }}</a>
                 {{ else }}
                   <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
                 {{ end }}
               </td>
               <td>
                 {{ with $project_domain }}
-                  <a href="{{ .RelPermalink }}" class="project-link">{{ .name }}</a>
+                  <a href="{{ .permalink }}" class="project-link">{{ .name }}</a>
                 {{ else }}
                   <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
                 {{ end }}
@@ -61,11 +61,7 @@
                 {{ end }}
               </td>
               <td>
-                {{ with .Params.year }}
-                  {{ . }}
-                {{ else }}
-                  <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
-                {{ end }}
+                {{ .Params.year }}
               </td>
             </tr>
           {{ end }}
