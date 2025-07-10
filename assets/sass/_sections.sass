@@ -247,6 +247,9 @@
                     .block-content
                         padding-left: offset(2)
                         padding-right: offset(2)
+                    .block-chapter
+                        .block-content
+                            padding-right: offset(1)
     @include media-breakpoint-up(desktop)
         html:not(.has-menu-opened) &
             #document-header:not(.sticky)
@@ -294,23 +297,40 @@
     .block-gallery + .block-gallery,
     .block-image + .block-image
         margin-top: 0
+    // others projects block
+    .blocks .block:last-child
+        &.block-projects--grid
+            border-top: 1px dashed var(--color-text-alt)
+            .block-title
+                @include h2
+                text-align: center
+                a::after
+                    opacity: 0
+                a:hover::after
+                    opacity: 1
+            @include media-breakpoint-up(desktop)
+                margin-top: space(33)
+                padding-top: space(37)
 
-.projects_categories__term
-    .document-content
-        .projects--grid
-            grid-template-columns: repeat(3, 1fr)
-            .media
-                img
-                    aspect-ratio: 1.36/1
-                    object-fit: cover
-            .project-content
-                .project-meta
-                    time
-                        color: $color-text
-                hgroup
+                .block-content
+                    padding-right: 0
+                    padding-left: 0
+// global
+.block-projects--grid,
+.projects 
+    .projects--grid
+        @include grid(3, desktop)
+        .project-content
+            .project-title
+                @include h4
+                color: $color-text
+            .project-subtitle
+                @include meta
+                color: $color-text
+            .project-meta
+                time
                     color: $color-text
-                    h2
-                        @include h4
-                    .project-subtitle
-                        @include meta
-                        color: $color-text
+        .media
+            img
+                aspect-ratio: 1.36/1
+                object-fit: cover
