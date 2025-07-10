@@ -259,11 +259,6 @@
     .document-content
         .project-sidebar
             display: none
-        .block-image
-            .block-content
-                picture
-                    margin: 0
-                    width: columns(8)
         .block-siblings-navigation
             display: none
         @include media-breakpoint-up(desktop)
@@ -279,6 +274,9 @@
     .block-gallery--large
         figure
             margin-bottom: var(--grid-gutter) !important
+            @include media-breakpoint-down(desktop)
+                padding-left: var(--grid-gutter)
+                padding-right: var(--grid-gutter)
     .block-gallery, 
     .block-image
         margin-bottom: var(--grid-gutter)
@@ -340,6 +338,11 @@
                         img
                             aspect-ratio: 1.36/1
                             object-fit: cover
+        .block-image
+            .block-content
+                picture
+                    margin: 0
+                    width: columns(8)
 // global
 .block-projects--grid,
 .projects 
