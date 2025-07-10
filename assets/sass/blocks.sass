@@ -144,6 +144,38 @@
                 width: columns(6)
                 margin-bottom: $spacing-6
 
+// features
+.block-features ul
+    .name
+        @include meta
+        font-weight: 400
+    li 
+        figure
+            height: auto
+            width: columns(6)
+            picture
+                padding-top: 0
+            img
+                aspect-ratio: unset
+                filter: grayscale(1)
+                max-width: 100% !important
+                width: 100%
+        + li
+            margin-top: 0
+    @include in-page-with-or-without-sidebar
+        @include grid(3)
+        align-items: baseline
+        li
+            height: 100%
+            flex-direction: column
+            .name
+                @include meta
+                font-weight: 400
+            figure
+                flex: 1
+                margin-right: 0
+                width: 100%
+
 // table
 .block-datatable
     table
