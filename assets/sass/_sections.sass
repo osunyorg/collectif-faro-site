@@ -85,10 +85,12 @@
         // hover effect
         tbody
             td:not(.project-title)
-                position: relative
-                z-index: 2
-                a:hover
-                    @include link(inherit)
+                a
+                    position: relative
+                    z-index: 2
+                    &:hover
+                        @include link(inherit)
+
             tr
                 &:first-of-type td
                     border-color: var(--color-text)
@@ -96,7 +98,7 @@
                     background: var(--color-accent)
                     td, a
                         color: var(--color-background)
-                    &, + tr 
+                    &, + tr
                         td
                             border-color: var(--color-accent)
     @include media-breakpoint-down(desktop)
@@ -166,8 +168,8 @@
     //                 @include h4
     //                 width: columns(5)
     //                 @include media-breakpoint-down(desktop)
-                            // IMPORTANT : éviter les répétitions : 
-    //                     // plutôt que de mettre du 100% à chaque fois on va plutôt 
+                            // IMPORTANT : éviter les répétitions :
+    //                     // plutôt que de mettre du 100% à chaque fois on va plutôt
                             // uniquement indiquer la width en desktop
     //                     width: 100%
     //                     margin-bottom: $spacing-1
