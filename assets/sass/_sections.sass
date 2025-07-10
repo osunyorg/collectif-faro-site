@@ -15,10 +15,13 @@
 // projects
 .projects__section,
 .projects__page
+    .taxonomies-list--inline
+        @include grid(1)
     .taxonomy-categories,
     .taxonomies-single
         display: flex
         flex-wrap: wrap
+        justify-content: center
         gap: $spacing-1 $spacing-2
         li a
             @extend .btn
@@ -26,10 +29,6 @@
             @extend .button--accent
             background: none
             line-height: 1
-    @include media-breakpoint-down(desktop)
-        .taxonomies-list--inline
-            @include grid(1)
-
 .projects__section
     .hero
         padding-bottom: 0
