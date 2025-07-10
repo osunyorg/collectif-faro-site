@@ -44,6 +44,7 @@
         // @include meta
     // on scope dans un tableau + class :
     table.projects-list
+        border-bottom: 1px dashed var(--color-text-alt)
         th, td:not(.project-title)
             @include meta
         a
@@ -239,6 +240,8 @@
                 picture
                     margin: 0
                     width: columns(8)
+                    @include media-breakpoint-down(desktop)
+                        width: 100%
         .block-siblings-navigation
             display: none
         @include media-breakpoint-up(desktop)
@@ -317,7 +320,7 @@
                     padding-left: 0
 // global
 .block-projects--grid,
-.projects 
+.projects
     .projects--grid
         @include grid(3, desktop)
         .project-content
