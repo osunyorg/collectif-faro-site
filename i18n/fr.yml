@@ -3,9 +3,10 @@ header:
 
 projects:
   index:
-    header:
+    table:
       title: Nom du projet
       type: Type
-      domaine: Domaine
+      domain: Domaine
       location: Lieu
       date: Date
+      no_data: Information non renseignée

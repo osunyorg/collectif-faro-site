@@ -24,90 +24,163 @@
             @extend .btn
             @extend .button--small
             @extend .button--accent
+            background: none
             line-height: 1
 
 .projects__section
-    .document-content
-        color: var(--color-text-alt)
-        @include meta
-        .project-list-header
-            display: flex
-            list-style: none
-            justify-content: space-between
-            padding: 0 var(--grid-gutter)
-            @include media-breakpoint-down(desktop)
-                display: none
-            #index-title
-                width: columns(5)
-            #index-type
-                width: columns(2)
-            #index-year
-                width: columns(1)
-                display: flex
-                justify-content: flex-end
-        .project-list
-            border-top: 1px dotted var(--color-text-alt)
-        .section-taxonomies-container
-            .taxonomies-list
-                display: flex
-                justify-content: center
-                @include media-breakpoint-down(desktop)
-                    flex-direction: columns
-                    display: flex
-                    align-items: center
-                .taxonomy-categories
-                    ul
-                        display: flex
-                        @include media-breakpoint-down(desktop)
-                            flex-direction: column
-                            display: flex
-                        li
-                            margin-right: $spacing-2
-                            @include media-breakpoint-down(desktop)
-                                margin-bottom: $spacing-2
-        ol
-            list-style: none
-            padding-left: var(--grid-gutter-negative)
-            #index-list
-                justify-content: space-evenly
-                border-bottom: 1px dotted var(--color-text-alt)
+    .hero
+        padding-bottom: 0
+        margin-bottom: $spacing-2
+    // .document-content
+        // IMPORTANT : on n'applique pas un style sur tout un document comme ça -> on scope
+        // color: var(--color-text-alt)
+        // @include meta
+    // on scope dans un tableau + class :
+    table.projects-list
+        th, td:not(.project-title)
+            @include meta
+        a
+            text-decoration: none
+            line-height: 1
+        thead
+            color: var(--color-text-alt)
+            th
+                font-weight: 400
+        tr
+            position: relative
+            td:first-of-type
+                @include h6
+                a
+                    @include stretched-link
+                @include media-breakpoint-up(desktop)
+                    @include h4
+            // columsn width and spacings
+            td:not(:last-of-type)
+                padding-right: 0
+                width: calc(#{columns(2)} + var(--grid-gutter))
+            th:first-of-type,
+            td:first-of-type
+                padding-left: var(--grid-gutter)
+                min-width: 45vw
+                @include media-breakpoint-up(desktop)
+                    width: calc(#{columns(5)} + var(--grid-gutter))
+            th:last-of-type,
+            td:last-of-type
+                padding-right: var(--grid-gutter)
+                text-align: right
+            td + td,
+            th + th
+                padding-left: var(--grid-gutter)
+            td
+                border-top-style: dashed
+                border-top-width: 1px
+                border-color: var(--color-text-alt)
+        // hover effect
+        tbody
+            td:not(.project-title)
+                position: relative
+                z-index: 2
+                a:hover
+                    @include link(inherit)
+            tr
+                &:first-of-type td
+                    border-color: var(--color-text)
                 &:hover
-                    background-color: var(--color-accent)
-                    a
+                    background: var(--color-accent)
+                    td, a
                         color: var(--color-background)
-                .project-link
-                    display: flex
-                    text-decoration: none
-                    justify-content: space-evenly
-                    @include media-breakpoint-down(desktop)
-                        display: flex
-                        flex-direction: column
-                        margin: 0 20px
-                    #index-title,
-                    #index-type,
-                    #index-year
-                        margin: $spacing-2 0
-                    #index-title
-                        @include h4
-                        width: columns(5)
-                        @include media-breakpoint-down(desktop)
-                            width: 100%
-                            margin-bottom: $spacing-1
-                    #index-type
-                        width: columns(2)
-                        @include media-breakpoint-down(desktop)
-                            width: 100%
-                            margin-bottom: $spacing-1
-                            margin-top: 0
-                    #index-year
-                        width: columns(1)
-                        display: flex
-                        justify-content: flex-end
-                        @include media-breakpoint-down(desktop)
-                            justify-content: start
-                            width: 100%
-                            margin-bottom: $spacing-1
-                            margin-top: 0
+                    &, + tr 
+                        td
+                            border-color: var(--color-accent)
+    @include media-breakpoint-down(desktop)
+        .table-responsive
+            margin-right: 0
+            padding-right: 0
+
+    // .project-list-header
+    //     display: flex
+    //     list-style: none
+    //     justify-content: space-between
+    //     padding: 0 var(--grid-gutter)
+    //     @include media-breakpoint-down(desktop)
+    //         display: none
+    //     // IMPORTANT : on évite les id (#)
+    //     #index-title
+    //         width: columns(5)
+    //     #index-type
+    //         width: columns(2)
+    //     #index-year
+    //         width: columns(1)
+    //         display: flex
+    //         justify-content: flex-end
+    // .project-list
+    //     border-top: 1px dotted var(--color-text-alt)
+    // .section-taxonomies-container
+    //     .taxonomies-list
+    //         display: flex
+    //         justify-content: center
+    //         @include media-breakpoint-down(desktop)
+    //             flex-direction: columns
+    //             display: flex
+    //             align-items: center
+    //         .taxonomy-categories
+    //             ul
+    //                 display: flex
+    //                 @include media-breakpoint-down(desktop)
+    //                     flex-direction: column
+    //                     display: flex
+    //                 li
+    //                     margin-right: $spacing-2
+    //                     @include media-breakpoint-down(desktop)
+    //                         margin-bottom: $spacing-2
+    // ol
+    //     list-style: none
+    //     padding-left: var(--grid-gutter-negative)
+    //     #index-list
+    //         justify-content: space-evenly
+    //         border-bottom: 1px dotted var(--color-text-alt)
+    //         &:hover
+    //             background-color: var(--color-accent)
+    //             a
+    //                 color: var(--color-background)
+    //         .project-link
+    //             display: flex
+    //             text-decoration: none
+    //             justify-content: space-evenly
+    //             @include media-breakpoint-down(desktop)
+    //                 display: flex
+    //                 flex-direction: column
+    //                 margin: 0 20px
+    //             #index-title,
+    //             #index-type,
+    //             #index-year
+    //                 margin: $spacing-2 0
+    //             #index-title
+    //                 @include h4
+    //                 width: columns(5)
+    //                 @include media-breakpoint-down(desktop)
+                            // IMPORTANT : éviter les répétitions : 
+    //                     // plutôt que de mettre du 100% à chaque fois on va plutôt 
+                            // uniquement indiquer la width en desktop
+    //                     width: 100%
+    //                     margin-bottom: $spacing-1
+    //             #index-type
+    //                 width: columns(2)
+    //                 @include media-breakpoint-down(desktop)
+    //                     width: 100%
+    //                     margin-bottom: $spacing-1
+    //                     margin-top: 0
+    //             #index-year
+    //                 width: columns(1)
+    //                 display: flex
+    //                 justify-content: flex-end
+                        // IMPORTANT : parfois un text-align vaut mieux que du flex
+                        // dans ce cas flex est une machine de guerre inutile
+    //                 @include media-breakpoint-down(desktop)
+    //                     justify-content: start
+    //                     width: 100%
+    //                     margin-bottom: $spacing-1
+    //                     margin-top: 0
 
 
 .projects__page
@@ -122,7 +195,7 @@
                     color: var(--color-text)
                     font-weight: 300
         @include media-breakpoint-up(desktop)
-            &, .content
+            &.hero--with-image, .content
                 padding-top: 0
                 figure
                     margin-top: 0

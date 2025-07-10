@@ -7,39 +7,71 @@
 
     {{ partial "taxonomies/section-list-container.html" . }}
 
+    <div class="table-responsive">
+      <table class="projects-list">
+        <thead>
+          <tr>
+            <th>{{ i18n "projects.index.table.title" }}</th>
+            <th>{{ i18n "projects.index.table.type" }}</th>
+            <th>{{ i18n "projects.index.table.domain" }}</th>
+            <th>{{ i18n "projects.index.table.location" }}</th>
+            <th>{{ i18n "projects.index.table.date" }}</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{ range .Pages }}
+            {{ $project_type := "" }}
+            {{ $project_domain := "" }}
 
-    {{/*  TODO: set index projects as table  */}}
-    <div class="project-list-header">
-      <div id="index-title">{{ i18n "projects.index.header.title" }}</div>
-      <div id="index-type">{{ i18n "projects.index.header.type" }}</div>
-      <div id="index-type">{{ i18n "projects.index.header.domaine" }}</div>
-      <div id="index-type">{{ i18n "projects.index.header.location" }}</div>
-      <div id="index-year">{{ i18n "projects.index.header.date" }}</div>
+            {{ range .Params.taxonomies }}
+              {{ if eq .name (i18n "projects.index.table.type") }}
+                {{ range .categories }} 
+                    {{ $project_type = . }}
+                {{ end }}
+              {{ end }}
+              {{ if eq .name (i18n "projects.index.table.domain") }}
+                {{ range .categories }} 
+                  {{ $project_domain = . }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+            <tr>
+              <td class="project-title">
+              <a href="{{ .RelPermalink }}" class="project-link">{{ .Title }}</a>
+              </td>
+              <td>
+                {{ with $project_type }}
+                  <a href="{{ .RelPermalink }}" class="project-link">{{ .name }}</a>
+                {{ else }}
+                  <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
+                {{ end }}
+              </td>
+              <td>
+                {{ with $project_domain }}
+                  <a href="{{ .RelPermalink }}" class="project-link">{{ .name }}</a>
+                {{ else }}
+                  <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
+                {{ end }}
+              </td>
+              <td>
+                {{ with .Params.Subtitle }}
+                  {{ . }}
+                {{ else }}
+                  <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
+                {{ end }}
+              </td>
+              <td>
+                {{ with .Params.year }}
+                  {{ . }}
+                {{ else }}
+                  <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
+                {{ end }}
+              </td>
+            </tr>
+          {{ end }}
+        </tbody>
+      </table>
     </div>
-
-    <ol class="project-list">
-      {{ range .Pages }}
-        <li id="index-list">
-          <a href="{{ .RelPermalink }}" class="project-link">
-            <div id="index-title">
-                {{ .Title }}
-            </div>
-            <div id="index-type">
-                {{ .Params.year }}
-            </div>
-            <div id="index-type">
-                {{ .Params.year }}
-            </div>
-            <div id="index-type">
-                {{ .Params.Subtitle }}
-            </div>
-            <div id="index-year">
-                {{ .Params.year }}
-            </div>
-          </a>
-        </li>
-      {{ end }}
-    </ol>
 
     {{/* Display the contents list only on the first page */}}
 
