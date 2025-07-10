@@ -202,6 +202,16 @@
                     @include body-text
                     color: var(--color-text)
                     font-weight: 300
+        > .container
+            display: flex
+            flex-direction: column
+            .project-year
+                order: -1
+            @include media-breakpoint-down(desktop)
+                .hero-text
+                    margin-top:  $spacing-3
+                .project-year
+                    margin-top:  $spacing-5
         @include media-breakpoint-up(desktop)
             margin-bottom: 0
             &.hero--with-image, .content
@@ -229,6 +239,16 @@
             figure
                 order: -1
                 width: 100%
+                img
+                    height: $hero-project-image-height
+            &.hero--with-image
+                .project-year
+                    left: 0
+                    margin-top: $spacing-5
+                    padding-left: var(--grid-gutter)
+                    padding-right: var(--grid-gutter)
+                    position: absolute
+                    top: $hero-project-image-height
     .document-content
         .project-sidebar
             display: none
@@ -248,6 +268,40 @@
                     .block-chapter
                         .block-content
                             padding-right: offset(1)
+    .block-image.image-landscape,
+    .block-gallery--large
+        figure
+            margin-bottom: var(--grid-gutter) !important
+    .block-gallery, 
+    .block-image
+        margin-bottom: var(--grid-gutter)
+        figcaption
+            @include meta
+            .credit
+                color: var(--color-text-alt)
+    .block-gallery + .block-image,
+    .block-image + .block-gallery,
+    .block-gallery + .block-gallery,
+    .block-image + .block-image
+        margin-top: 0
+    // others projects block
+    .blocks .block:last-child
+        &.block-projects--grid
+            border-top: 1px dashed var(--color-text-alt)
+            padding-top: $spacing-4
+            .block-title
+                @include h2
+                text-align: center
+                a::after
+                    opacity: 0
+                a:hover::after
+                    opacity: 1
+            @include media-breakpoint-up(desktop)
+                margin-top: space(33)
+                padding-top: space(37)
+                .block-content
+                    padding-right: 0
+                    padding-left: 0
     @include media-breakpoint-up(desktop)
         html:not(.has-menu-opened) &
             #document-header:not(.sticky)
@@ -279,40 +333,6 @@
                         img
                             aspect-ratio: 1.36/1
                             object-fit: cover
-    .block-image.image-landscape,
-    .block-gallery--large
-        figure
-            margin-bottom: var(--grid-gutter) !important
-    .block-gallery, 
-    .block-image
-        margin-bottom: var(--grid-gutter)
-        figcaption
-            @include meta
-            .credit
-                color: var(--color-text-alt)
-    .block-gallery + .block-image,
-    .block-image + .block-gallery,
-    .block-gallery + .block-gallery,
-    .block-image + .block-image
-        margin-top: 0
-    // others projects block
-    .blocks .block:last-child
-        &.block-projects--grid
-            border-top: 1px dashed var(--color-text-alt)
-            .block-title
-                @include h2
-                text-align: center
-                a::after
-                    opacity: 0
-                a:hover::after
-                    opacity: 1
-            @include media-breakpoint-up(desktop)
-                margin-top: space(33)
-                padding-top: space(37)
-
-                .block-content
-                    padding-right: 0
-                    padding-left: 0
 // global
 .block-projects--grid,
 .projects 
