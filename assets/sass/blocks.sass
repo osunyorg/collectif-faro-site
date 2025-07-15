@@ -163,11 +163,14 @@
         + li
             margin-top: 0
     @include in-page-with-or-without-sidebar
-        @include grid(3)
-        align-items: baseline
+        display: flex
+        justify-content: space-between
         li
-            height: 100%
             flex-direction: column
+            height: 100%
+            width: columns(2)
+            > div
+                flex: 1
             .name
                 @include meta
                 font-weight: 400

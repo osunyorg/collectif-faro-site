@@ -11,6 +11,8 @@
         &.full-width
             main > .document-content .blocks
                 --block-space-y: #{space(34)}
+        main
+            background-size: 100% 65vh
 
 // projects
 .projects__section,
@@ -38,11 +40,6 @@
     .hero
         padding-bottom: 0
         margin-bottom: $spacing-2
-    // .document-content
-        // IMPORTANT : on n'applique pas un style sur tout un document comme ça -> on scope
-        // color: var(--color-text-alt)
-        // @include meta
-    // on scope dans un tableau + class :
     table.projects-list
         border-bottom: 1px dashed var(--color-text-alt)
         th, td:not(.project-title)
@@ -107,92 +104,6 @@
             margin-right: 0
             padding-right: 0
 
-    // .project-list-header
-    //     display: flex
-    //     list-style: none
-    //     justify-content: space-between
-    //     padding: 0 var(--grid-gutter)
-    //     @include media-breakpoint-down(desktop)
-    //         display: none
-    //     // IMPORTANT : on évite les id (#)
-    //     #index-title
-    //         width: columns(5)
-    //     #index-type
-    //         width: columns(2)
-    //     #index-year
-    //         width: columns(1)
-    //         display: flex
-    //         justify-content: flex-end
-    // .project-list
-    //     border-top: 1px dotted var(--color-text-alt)
-    // .section-taxonomies-container
-    //     .taxonomies-list
-    //         display: flex
-    //         justify-content: center
-    //         @include media-breakpoint-down(desktop)
-    //             flex-direction: columns
-    //             display: flex
-    //             align-items: center
-    //         .taxonomy-categories
-    //             ul
-    //                 display: flex
-    //                 @include media-breakpoint-down(desktop)
-    //                     flex-direction: column
-    //                     display: flex
-    //                 li
-    //                     margin-right: $spacing-2
-    //                     @include media-breakpoint-down(desktop)
-    //                         margin-bottom: $spacing-2
-    // ol
-    //     list-style: none
-    //     padding-left: var(--grid-gutter-negative)
-    //     #index-list
-    //         justify-content: space-evenly
-    //         border-bottom: 1px dotted var(--color-text-alt)
-    //         &:hover
-    //             background-color: var(--color-accent)
-    //             a
-    //                 color: var(--color-background)
-    //         .project-link
-    //             display: flex
-    //             text-decoration: none
-    //             justify-content: space-evenly
-    //             @include media-breakpoint-down(desktop)
-    //                 display: flex
-    //                 flex-direction: column
-    //                 margin: 0 20px
-    //             #index-title,
-    //             #index-type,
-    //             #index-year
-    //                 margin: $spacing-2 0
-    //             #index-title
-    //                 @include h4
-    //                 width: columns(5)
-    //                 @include media-breakpoint-down(desktop)
-                            // IMPORTANT : éviter les répétitions :
-    //                     // plutôt que de mettre du 100% à chaque fois on va plutôt
-                            // uniquement indiquer la width en desktop
-    //                     width: 100%
-    //                     margin-bottom: $spacing-1
-    //             #index-type
-    //                 width: columns(2)
-    //                 @include media-breakpoint-down(desktop)
-    //                     width: 100%
-    //                     margin-bottom: $spacing-1
-    //                     margin-top: 0
-    //             #index-year
-    //                 width: columns(1)
-    //                 display: flex
-    //                 justify-content: flex-end
-                        // IMPORTANT : parfois un text-align vaut mieux que du flex
-                        // dans ce cas flex est une machine de guerre inutile
-    //                 @include media-breakpoint-down(desktop)
-    //                     justify-content: start
-    //                     width: 100%
-    //                     margin-bottom: $spacing-1
-    //                     margin-top: 0
-
-
 .projects__page
     .hero
         .hero-text
@@ -213,8 +124,6 @@
             @include media-breakpoint-down(desktop)
                 .hero-text
                     margin-top:  $spacing-3
-                .project-year
-                    margin-top:  $spacing-5
         @include media-breakpoint-up(desktop)
             margin-bottom: 0
             &.hero--with-image, .content
@@ -223,6 +132,8 @@
                     margin-top: 0
             .container
                 padding: 0
+            .project-year
+                margin-top: $spacing-5
             .hero-text
                 @include container
                 padding-left: calc(#{offset(2)} + var(--grid-gutter))
@@ -249,10 +160,16 @@
                     padding-right: var(--grid-gutter)
                     &::before
                         right: var(--grid-gutter)
+            &:not(.hero--with-image)
+                .project-year
+                    @include container
+                    time
+                        margin-left: offset(2)
+                .hero-text
+                    margin-top: $spacing-3
             &.hero--with-image
                 .project-year
                     left: 0
-                    margin-top: $spacing-5
                     padding-left: var(--grid-gutter)
                     padding-right: var(--grid-gutter)
                     position: absolute
@@ -260,13 +177,6 @@
     .document-content
         .project-sidebar
             display: none
-        .block-image
-            .block-content
-                picture
-                    margin: 0
-                    width: columns(8)
-                    @include media-breakpoint-down(desktop)
-                        width: 100%
         .block-siblings-navigation
             display: none
         @include media-breakpoint-up(desktop)
@@ -282,6 +192,9 @@
     .block-gallery--large
         figure
             margin-bottom: var(--grid-gutter) !important
+            @include media-breakpoint-down(desktop)
+                padding-left: var(--grid-gutter)
+                padding-right: var(--grid-gutter)
     .block-gallery,
     .block-image
         margin-bottom: var(--grid-gutter)
@@ -343,6 +256,11 @@
                         img
                             aspect-ratio: 1.36/1
                             object-fit: cover
+        .block-image
+            .block-content
+                picture
+                    margin: 0
+                    width: columns(8)
 // global
 .block-projects--grid,
 .projects
