@@ -40,46 +40,50 @@
     .hero
         padding-bottom: 0
         margin-bottom: $spacing-2
-    table.projects-list
-        border-bottom: 1px dashed var(--color-text-alt)
-        th, td:not(.project-title)
-            @include meta
-        a
-            text-decoration: none
-            line-height: 1
-        thead
-            color: var(--color-text-alt)
-            th
-                font-weight: 400
-        tr
-            position: relative
-            td:first-of-type
-                @include h6
-                a
-                    @include stretched-link
-                @include media-breakpoint-up(desktop)
-                    @include h4
-            // columsn width and spacings
-            td:not(:last-of-type)
-                padding-right: 0
-                width: calc(#{columns(2)} + var(--grid-gutter))
-            th:first-of-type,
-            td:first-of-type
-                padding-left: var(--grid-gutter)
-                min-width: 45vw
-                @include media-breakpoint-up(desktop)
-                    width: calc(#{columns(5)} + var(--grid-gutter))
-            th:last-of-type,
-            td:last-of-type
-                padding-right: var(--grid-gutter)
-                text-align: right
-            td + td,
-            th + th
-                padding-left: var(--grid-gutter)
-            td
-                border-top-style: dashed
-                border-top-width: 1px
-                border-color: var(--color-text-alt)
+    .table-responsive
+        margin: 0px
+        table.projects-list
+            border-bottom: 1px dashed var(--color-text-alt)
+            th, td:not(.project-title)
+                @include meta
+            a
+                text-decoration: none
+                line-height: 1
+            thead
+                color: var(--color-text-alt)
+                th
+                    font-weight: 400
+            tr
+                position: relative
+                td:first-of-type
+                    @include h6
+                    a
+                        @include stretched-link
+                    @include media-breakpoint-up(desktop)
+                        @include h4
+                    @supports (background: -webkit-named-image(i))
+                        position: relative
+                // columsn width and spacings
+                td:not(:last-of-type)
+                    padding-right: 0
+                    width: calc(#{columns(2)} + var(--grid-gutter))
+                th:first-of-type,
+                td:first-of-type
+                    padding-left: var(--grid-gutter)
+                    min-width: 45vw
+                    @include media-breakpoint-up(desktop)
+                        width: calc(#{columns(5)} + var(--grid-gutter))
+                th:last-of-type,
+                td:last-of-type
+                    padding-right: var(--grid-gutter)
+                    text-align: right
+                td + td,
+                th + th
+                    padding-left: var(--grid-gutter)
+                td
+                    border-top-style: dashed
+                    border-top-width: 1px
+                    border-color: var(--color-text-alt)
         // hover effect
         tbody
             td:not(.project-title)
