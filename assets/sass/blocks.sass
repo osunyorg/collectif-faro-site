@@ -22,6 +22,9 @@
                     .description
                         max-width: 100%
                         margin-bottom: space(8)
+    @include media-breakpoint-down(desktop)
+        .block-content
+            text-align: center
 
 // categories
 .block-categories
@@ -129,8 +132,9 @@
         .block-title
             @include h4
         .organizations
-            display: flex
             justify-content: left
+            .organization-content
+                width: 80%
             .media--logo
                 max-width: 60%
                 background: none
@@ -149,7 +153,7 @@
     .name
         @include meta
         font-weight: 400
-    li 
+    li
         figure
             height: auto
             width: columns(6)
@@ -181,7 +185,7 @@
 
 // table
 .block-datatable
-    table 
+    table
         td
             &:first-child
                 font-weight: 600
