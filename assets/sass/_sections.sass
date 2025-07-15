@@ -89,9 +89,9 @@
                 a
                     position: relative
                     z-index: 2
+                    text-decoration-color: $color-background
                     &:hover
                         @include link(inherit)
-
             tr
                 &:first-of-type td
                     border-color: var(--color-text)
@@ -282,7 +282,7 @@
     .block-gallery--large
         figure
             margin-bottom: var(--grid-gutter) !important
-    .block-gallery, 
+    .block-gallery,
     .block-image
         margin-bottom: var(--grid-gutter)
         figcaption
