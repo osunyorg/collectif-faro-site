@@ -185,34 +185,6 @@
             display: none
         .block-siblings-navigation
             display: none
-        @include media-breakpoint-up(desktop)
-            &:not(.full-width)
-                .blocks
-                    .block-content
-                        padding-left: offset(2)
-                        padding-right: offset(2)
-                    .block-chapter
-                        .block-content
-                            padding-right: offset(1)
-    .block-image.image-landscape,
-    .block-gallery--large
-        figure
-            margin-bottom: var(--grid-gutter) !important
-            @include media-breakpoint-down(desktop)
-                padding-left: var(--grid-gutter)
-                padding-right: var(--grid-gutter)
-    .block-gallery,
-    .block-image
-        margin-bottom: var(--grid-gutter)
-        figcaption
-            @include meta
-            .credit
-                color: var(--color-text-alt)
-    .block-gallery + .block-image,
-    .block-image + .block-gallery,
-    .block-gallery + .block-gallery,
-    .block-image + .block-image
-        margin-top: 0
     // others projects block
     .blocks .block:last-child
         &.block-projects--grid
@@ -262,11 +234,6 @@
                         img
                             aspect-ratio: 1.36/1
                             object-fit: cover
-        .block-image
-            .block-content
-                picture
-                    margin: 0
-                    width: columns(8)
 // global
 .block-projects--grid,
 .projects

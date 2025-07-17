@@ -148,6 +148,7 @@ main
             .hero-text
                 width: 100%
                 .has-lead
+                    align-items: baseline
                     display: flex
                     h1
                         @include h2
@@ -186,3 +187,39 @@ main
         .content
             figure
                 display: none
+
+.document-content
+    body:not(.full-width) &
+        @include media-breakpoint-up(desktop)
+            .blocks
+                .block-content
+                    padding-left: offset(2)
+                    padding-right: offset(2)
+                .block-chapter
+                    .block-content
+                        padding-right: offset(1)
+                .block-image
+                    .block-content
+                        picture
+                            margin: 0
+                            width: columns(8)
+        
+        .block-image.image-landscape,
+        .block-gallery--large
+            figure
+                margin-bottom: var(--grid-gutter) !important
+                @include media-breakpoint-down(desktop)
+                    padding-left: var(--grid-gutter)
+                    padding-right: var(--grid-gutter)
+        .block-gallery,
+        .block-image
+            margin-bottom: var(--grid-gutter)
+            figcaption
+                @include meta
+                .credit
+                    color: var(--color-text-alt)
+        .block-gallery + .block-image,
+        .block-image + .block-gallery,
+        .block-gallery + .block-gallery,
+        .block-image + .block-image
+            margin-top: 0
