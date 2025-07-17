@@ -39,6 +39,13 @@
             background: none
             line-height: 1
             min-width: unset
+    @include media-breakpoint-down(desktop)
+        .hero .projects-categories,
+        .taxonomy-categories
+            align-items: center
+            flex-direction: column
+            margin-left: auto
+            margin-right: auto
 
 .projects__section
     .hero
@@ -261,13 +268,13 @@
 .projects_categories__term
     .hero
         .projects-categories
+            margin-left: auto
+            margin-right: auto
             margin-top: $spacing-2
             margin-bottom: $spacing-5
             @include media-breakpoint-up(desktop)
-                justify-content: center
-                margin-left: auto
-                margin-right: auto
                 width: columns(10)
         @include media-breakpoint-down(desktop)
             .hero-text
                 margin-bottom: $spacing-2
+                text-align: center

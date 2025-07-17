@@ -2,7 +2,6 @@
 header#document-header
     // TODO: use display none for mobile (adapt project section after this modification)
     .logo
-        @include stretched-link
         + figcaption
             @include h3
             line-height: 1
@@ -60,10 +59,45 @@ header#document-header
                         padding-left: 0
         html.has-menu-opened &
             background: $color-background
+    .header-button
+        span:first-of-type
+            @extend .sr-only
+    @include media-breakpoint-down(desktop)
+        html.has-menu-opened &
+            .primary-menu
+                background-image: $header-radiant-background
+                height: 100vh
+        .menu
+            #dropdown-réalisations
+                display: none
+                + .dropdown-menu
+                    display: block
+                    li
+                        a
+                            @include h1
+                            padding-left: $spacing-3
+                            padding-right: $spacing-3
+                        + li
+                            margin-top: space(8)
+            li
+                text-align: center
+                &:not(:last-child)
+                    border: none
+            > ul > li
+                a
+                    @include lead-hero
+                    padding: 0
+                + li:not(.nav-search)
+                    margin-top: space(5)
+            .search-button--primary
+                width: auto
+                margin: auto
     @include media-breakpoint-up(desktop)
         html.has-menu-opened &:not(.is-sticky)
             > nav
                 height: calc(#{$header-logo-height-desktop} + #{space(5)})
+        .logo
+            @include stretched-link
 
 // FOOTER
 footer#document-footer
