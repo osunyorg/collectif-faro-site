@@ -17,13 +17,16 @@
 
 // projects
 .projects__section,
-.projects__page
+.projects__page,
+.projects_categories__term
     .taxonomies-list--inline
         @include grid(1)
     .taxonomy-categories
         justify-content: center
+    .hero .projects-categories,
     .taxonomy-categories,
     .taxonomies-single
+        @include list-reset
         display: flex
         flex-wrap: wrap
         gap: $spacing-2 space()
@@ -253,3 +256,18 @@
             img
                 aspect-ratio: 1.36/1
                 object-fit: cover
+
+// projects categories
+.projects_categories__term
+    .hero
+        .projects-categories
+            margin-top: $spacing-2
+            margin-bottom: $spacing-5
+            @include media-breakpoint-up(desktop)
+                justify-content: center
+                margin-left: auto
+                margin-right: auto
+                width: columns(10)
+        @include media-breakpoint-down(desktop)
+            .hero-text
+                margin-bottom: $spacing-2
