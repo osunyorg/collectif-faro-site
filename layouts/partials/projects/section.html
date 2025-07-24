@@ -22,15 +22,14 @@
           {{ range .Pages }}
             {{ $project_type := "" }}
             {{ $project_domain := "" }}
-
             {{ range .Params.taxonomies }}
               {{ if eq .name (i18n "projects.index.table.type") }}
-                {{ range .categories }} 
+                {{ range .categories }}
                     {{ $project_type = . }}
                 {{ end }}
               {{ end }}
               {{ if eq .name (i18n "projects.index.table.domain") }}
-                {{ range .categories }} 
+                {{ range .categories }}
                   {{ $project_domain = . }}
                 {{ end }}
               {{ end }}
@@ -39,21 +38,21 @@
               <td class="project-title">
               <a href="{{ .RelPermalink }}" class="project-link">{{ .Title }}</a>
               </td>
-              <td>
+              <td {{ if eq $project_type "" -}} class="mobile-hidden" {{- end }}>
                 {{ with $project_type }}
                   <a href="{{ .permalink }}" class="project-link">{{ .name }}</a>
                 {{ else }}
                   <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
                 {{ end }}
               </td>
-              <td>
+              <td {{ if eq $project_domain "" -}} class="mobile-hidden" {{- end }}>
                 {{ with $project_domain }}
                   <a href="{{ .permalink }}" class="project-link">{{ .name }}</a>
                 {{ else }}
                   <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
                 {{ end }}
               </td>
-              <td>
+              <td {{ if eq .Params.Subtitle "" -}} class="mobile-hidden" {{- end }}>
                 {{ with .Params.Subtitle }}
                   {{ . }}
                 {{ else }}
