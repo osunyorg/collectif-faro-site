@@ -70,8 +70,7 @@
                 .block-title
                     @include h4
             .rich-text
-                p:nth-of-type(2)
-                    font-weight: $regular
+                p
                     margin-top: $spacing-4
 
 // projects
@@ -150,38 +149,50 @@
 
 // features
 .block-features ul
-    .name
+  li
+    align-items: center
+    gap: pxToRem(80)
+    @include media-breakpoint-down(desktop)
+      gap: pxToRem(0)
+    div
+      .name
         @include meta
-        font-weight: 400
-    li
-        figure
-            height: auto
-            width: columns(6)
-            picture
-                padding-top: 0
-            img
-                aspect-ratio: unset
-                filter: grayscale(1)
-                max-width: 100% !important
-                width: 100%
-        + li
-            margin-top: 0
-    @include in-page-with-or-without-sidebar
-        display: flex
-        justify-content: space-between
-        li
-            flex-direction: column
-            height: 100%
-            width: columns(2)
-            > div
-                flex: 1
-            .name
-                @include meta
-                font-weight: 400
-            figure
-                flex: 1
-                margin-right: 0
-                width: 100%
+        font-size: $h4-size-desktop
+        font-weight: 300
+        margin-bottom: 0
+        @include media-breakpoint-down(desktop)
+          margin-bottom: $spacing-3
+    figure
+      display: flex
+      width: columns(2)
+      @include media-breakpoint-down(desktop)
+        width: 100%
+      picture
+        padding: 18px 0
+        filter: grayscale(1)
+        &.is-png
+          img
+            margin: auto
+            max-width: 60%
+            @include media-breakpoint-down(desktop)
+              margin: 0
+        &:not(.is-png, .is-svg)
+          max-width: 80%
+          margin: auto
+          @include media-breakpoint-down(desktop)
+            margin: 0
+            max-width: 60%
+    + li
+      margin-top: 0
+      border-top: 1px dotted var(--color-text-alt)
+    &:first-child
+      picture.is-png
+        img
+          margin: 0
+          max-width: 100%
+          @include media-breakpoint-down(desktop)
+            max-width: 60%
+
 
 // table
 .block-datatable
