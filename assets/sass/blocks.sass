@@ -142,10 +142,13 @@
 // image
 .block-image
     @include in-page-with-sidebar
-        &.image-landscape,
+        &.image-landscape
             figure
                 width: columns(6)
                 margin-bottom: $spacing-6
+                img
+                    max-height: 100%
+                    aspect-ratio: 3/2
 
 // features
 .block-features
