@@ -36,6 +36,9 @@ params:
           desktop:  1880
         hero_term:
           desktop:  1880
+      pages:
+        hero:
+          desktop:  1880
       projects:
         hero_single:
           desktop:  1920
