@@ -15,6 +15,17 @@ fr:
             contact@collectif-faro.fr
           value: >-
             mailto:contact@collectif-faro.fr
+      social_networks:
+        instagram:
+          label: >-
+            collectif_faro
+          value: >-
+            https://instagram.com/collectif_faro
+        linkedin:
+          label: >-
+            collectif-faro
+          value: >-
+            https://www.linkedin.com/company/collectif-faro/
 
   taxonomies:
     administrator: administrators
