@@ -130,6 +130,7 @@ footer#document-footer
             display: flex
             flex-direction: column-reverse
             margin-top: 0
+            row-gap: space()
         margin-bottom: space(2)
         .footer-legals
             @include media-breakpoint-down(desktop)
@@ -144,9 +145,33 @@ footer#document-footer
                     margin-top: 0px
             .footer-credit
                 display: none
-        .footer-social
-            @include media-breakpoint-down(desktop)
-                align-self: flex-end
+    .footer-social
+        ul
+            align-items: baseline
+            display: flex
+            justify-content: flex-end
+            flex-wrap: wrap
+            gap: space(5)
+            li
+                &::before
+                    @include meta
+                &::after
+                    content: none
+            .email::before
+                content: 'contact@collectif-faro.fr'
+            .instagram::before
+                content: 'In'
+            .linkedin::before
+                content: 'Ln'
+            .facebook::before
+                content: 'Fb'
+    @include media-breakpoint-down(desktop)
+        .container
+            padding-left: 0
+            .footer-social
+                row-gap: space()
+                li + li
+                    margin-top: 0
 
 // MAIN
 main
