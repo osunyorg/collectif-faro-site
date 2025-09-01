@@ -1,3 +1,7 @@
+// TYPOGRAPHY
+body
+    font-weight: $body-weight
+
 // HEADER
 header#document-header
     // TODO: use display none for mobile (adapt project section after this modification)
@@ -63,6 +67,8 @@ header#document-header
         span:first-of-type
             @extend .sr-only
     @include media-breakpoint-down(desktop)
+        .primary-menu
+            padding-top: space(3)
         html.has-menu-opened &
             .primary-menu
                 background-image: $header-radiant-background
@@ -209,13 +215,14 @@ main
                 .has-lead
                     align-items: baseline
                     display: flex
+                    gap: var(--grid-gutter)
                     h1
                         @include h2
                         width: columns(6)
                         padding-right: offset(1)
                     p
                         margin: 0px
-                        width: columns(7)
+                        width: columns(6)
             figure
                 width: 100%
                 margin-top: space(8)
