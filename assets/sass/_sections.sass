@@ -14,6 +14,73 @@
                 --block-space-y: #{space(34)}
         main
             background-size: 100% 65vh
+    
+// projects
+.page__home .block-projects
+    &--grid
+        .block-content
+            display: flex
+            align-items: center
+            justify-content: center
+        .grid
+            max-width: calc(#{columns(10)} + #{pxToRem(110)})
+            padding-top: pxToRem(230)
+            margin: auto
+            display: flex
+            flex-direction: row-reverse
+            flex-wrap: wrap
+            justify-content: end
+            align-items: start
+            gap: pxToRem(110)
+        .project
+            &:nth-child(odd)
+                margin-top: pxToRem(-230)
+            .project-content
+                align-items: center
+                background-color: $color-background-brown
+                display: flex
+                flex-direction: column
+                gap: $spacing-1
+                justify-content: center
+                text-align: center
+                padding: $spacing-3
+                transition: opacity 0.3s ease
+                z-index: 2
+                .project-description
+                    flex: unset
+                .project-title
+                    @include h4
+                .project-subtitle
+                    @include body-text
+                .project-subtitle,
+                .project-meta time
+                    color: var(--color-text)
+                    font-weight: 400
+                .project-meta
+                    order: -1
+            .media
+                margin-bottom: 0
+                z-index: 1
+                img
+                    aspect-ratio: 638/468
+                    object-fit: cover
+            // TODO: remove 'has' when everything is online or decide of a default image
+            &:has(.media:empty)
+                .project-content
+                    aspect-ratio: 638/468
+            &:has(.media:not(:empty))
+                .project-content
+                    bottom: 0
+                    left: 0
+                    opacity: 0
+                    position: absolute
+                    top: 0
+                    right: 0
+            &:hover .project-content
+                opacity: 1 !important
+        @include media-breakpoint-up(desktop)
+            .project
+                width: columns(5)
 
 // projects
 .projects__section,
