@@ -18,23 +18,7 @@
 // projects
 .page__home .block-projects
     &--grid
-        .block-content
-            display: flex
-            align-items: center
-            justify-content: center
-        .grid
-            max-width: calc(#{columns(10)} + #{pxToRem(110)})
-            padding-top: pxToRem(230)
-            margin: auto
-            display: flex
-            flex-direction: row-reverse
-            flex-wrap: wrap
-            justify-content: end
-            align-items: start
-            gap: pxToRem(110)
         .project
-            &:nth-child(odd)
-                margin-top: pxToRem(-230)
             .project-content
                 align-items: center
                 background-color: $color-background-brown
@@ -78,9 +62,29 @@
                     right: 0
             &:hover .project-content
                 opacity: 1 !important
+        @include media-breakpoint-down(desktop)
+            .media
+                margin-left: 0
+                margin-right: 0
         @include media-breakpoint-up(desktop)
-            .project
-                width: columns(5)
+            .block-content
+                display: flex
+                align-items: center
+                justify-content: center
+            .grid
+                max-width: calc(#{columns(10)} + #{pxToRem(110)})
+                padding-top: pxToRem(230)
+                margin: auto
+                display: flex
+                flex-direction: row-reverse
+                flex-wrap: wrap
+                justify-content: end
+                align-items: start
+                gap: pxToRem(110)
+                .project
+                    width: columns(5)
+                    &:nth-child(odd)
+                        margin-top: pxToRem(-230)
 
 // projects
 .projects__section,
