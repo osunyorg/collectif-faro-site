@@ -400,3 +400,51 @@
             .hero-text
                 margin-bottom: $spacing-2
                 text-align: center
+    // taxonomy 'fiche technique'
+    &.ancestor-taxonomy
+        .projects
+            .project
+                &-categories
+                    display: block
+                    row-gap: $spacing-1
+                    li
+                        &.ancestor-taxonomy, &.ancestor-chapters
+                            order: -1
+                            a
+                                @extend .btn
+                                @extend .button--small
+                                @extend .button--accent
+                                --btn-min-width: 0
+            @include media-breakpoint-up(desktop)
+                .projects--grid
+                    display: block
+                .project, .project-content
+                    flex-direction: row
+                    gap: var(--grid-gutter)
+                .project
+                    .project-content
+                        flex: 1
+                    .project-categories
+                        li
+                            &:not(.ancestor-taxonomy, .ancestor-chapters)
+                                position: absolute
+                                right: offset(1)
+                                top: 0
+                                @for $i from 1 through 10 
+                                    &:nth-child(#{$i})
+                                        margin-top: calc(#{$i} * #{space(6)})
+                    .media
+                        width: columns(3)
+
+// 'à propos' / 'about' page
+.page-about
+    .toc-container
+        @extend .sr-only
+    &:not(.full-width)
+        .block--organizations
+            .block-content
+                padding-left: 0
+                padding-right: 0
+        @include media-breakpoint-up(desktop)
+            .block-title--classic + .block-title--collapsed
+                margin-top: space(16)

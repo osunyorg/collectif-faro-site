@@ -138,3 +138,22 @@
                 font-weight: 600
             &:last-child
                 text-align: right
+
+// bloc
+.block.block-title
+    @include in-page-with-sidebar
+        &--classic h2
+            padding-left: offset(2)
+            padding-right: offset(2)
+        &--collapsed
+            width: columns(8)
+            padding-left: 0
+            padding-right: 0
+            h2
+                padding-left: 0
+    &--collapsed 
+        h2
+            @include h4
+        &[aria-expanded="false"]::after
+            border-bottom: 1px dotted $color-text
+            
