@@ -97,6 +97,15 @@
                 img
                     max-height: 100%
 
+// gallery
+body:not(.full-width)
+    .block-gallery--grid
+        .gallery
+            @include grid(2)
+            figure
+                button
+                    width: 100%
+
 // features
 .block-features
     li
