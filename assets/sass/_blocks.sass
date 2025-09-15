@@ -44,6 +44,9 @@
                 margin-top: auto
                 img
                     aspect-ratio: 507/372
+            @include media-breakpoint-up(desktop)
+                [class$="_category-title"]
+                    line-height: pxToRem(40)
 
 // persons
 .block-persons
