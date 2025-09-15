@@ -107,6 +107,10 @@ header#document-header
         .logo
             @include stretched-link
 
+// menu overlay
+html.has-menu-opened body::after
+    backdrop-filter: blur(10px)
+
 // FOOTER
 footer#document-footer
     padding-top: space(100)
