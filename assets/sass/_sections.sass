@@ -397,17 +397,24 @@
     &.ancestor-taxonomy
         .projects
             .project
+                &-title
+                    @include h3
+                &-subtitle
+                    margin-top: $spacing-2
                 &-categories
-                    display: block
+                    display: flex
                     row-gap: $spacing-1
+                    margin-top: $spacing-3
                     li
                         &.ancestor-taxonomy, &.ancestor-chapters
                             order: -1
-                            a
-                                @extend .btn
-                                @extend .button--small
-                                @extend .button--accent
-                                --btn-min-width: 0
+                        a
+                            @extend .btn
+                            @extend .button--small
+                            @extend .button--accent
+                            --btn-min-width: 0
+                            padding-bottom: 0
+                            padding-top: 0
             @include media-breakpoint-up(desktop)
                 .projects--grid
                     display: block
@@ -417,15 +424,10 @@
                 .project
                     .project-content
                         flex: 1
+                        position: relative
                     .project-categories
-                        li
-                            &:not(.ancestor-taxonomy, .ancestor-chapters)
-                                position: absolute
-                                right: offset(1)
-                                top: 0
-                                @for $i from 1 through 10 
-                                    &:nth-child(#{$i})
-                                        margin-top: calc(#{$i} * #{space(6)})
+                        position: static
+                        max-width: columns(6)
                     .media
                         width: columns(3)
 
