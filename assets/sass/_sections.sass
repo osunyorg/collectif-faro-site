@@ -434,10 +434,14 @@
     .toc-container
         @extend .sr-only
     &:not(.full-width)
-        .block--organizations
+        .block-organizations
+            border-top: 1px dotted $color-text
+            padding-top: $spacing-6
             .block-content
-                padding-left: 0
-                padding-right: 0
+                padding-left: 0 !important
+                padding-right: 0 !important
+            .organizations.grid
+                @include grid(6, desktop)
         @include media-breakpoint-up(desktop)
             .block-title--classic + .block-title--collapsed
                 margin-top: space(16)
