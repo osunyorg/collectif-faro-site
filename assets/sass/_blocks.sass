@@ -22,6 +22,11 @@
                     .description
                         max-width: 100%
                         margin-bottom: space(8)
+                    .actions a
+                        @include body-text
+                        &:first-child
+                            --btn-min-width: 0
+                            padding: pxToRem(15) pxToRem(30)
     @include media-breakpoint-down(desktop)
         .block-content
             text-align: center
