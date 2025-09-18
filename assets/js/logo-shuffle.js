@@ -1,9 +1,10 @@
 class LogoShuffle {
     constructor () {
-        this.logoContainer = document.querySelector('.js-logo-shuffle');
-        if (!this.logoContainer) {
+        this.logoContainers = document.querySelectorAll('.js-logo-shuffle');
+        if (!this.logoContainers) {
             return;
         }
+
         this.listen();
     }
 
@@ -19,12 +20,16 @@ class LogoShuffle {
     }
 
     removeLogoOpacity () {
-        this.logoContainer.style.opacity = 1;
+        this.logoContainers.forEach(function (container) {
+            container.style.opacity = 1;
+        }, this);
     }
 
     createImage (url) {
-        let image = this.logoContainer.querySelector('img');
-        image.src = url;
+        this.logoContainers.forEach(function (container) {
+            let image = container.querySelector('img');
+            image.src = url;
+        }, this);
     }
 }
 
