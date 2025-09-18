@@ -14,7 +14,7 @@ class LogoShuffle {
 
     getImagesUrl() {
         let imageIndex = Math.floor(Math.random() * 5) + 1
-        let imageUrl = `/assets/images/logos/logo-${imageIndex}.png`;
+        let imageUrl = `/assets/images/logos/logo_${imageIndex}.svg`;
         this.createImage(imageUrl);
     }
 
