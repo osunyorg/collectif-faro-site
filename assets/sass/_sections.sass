@@ -262,9 +262,8 @@
             flex-direction: column
             .project-year
                 order: -1
-            @include media-breakpoint-down(desktop)
-                .hero-text
-                    margin-top:  $spacing-3
+        .hero-text
+            margin-top:  space(7)
         @include media-breakpoint-up(desktop)
             margin-bottom: 0
             &.hero--with-image, .content
@@ -274,7 +273,7 @@
             .container
                 padding: 0
             .project-year
-                margin-top: $spacing-5
+                margin-top: space(7)
             .hero-text
                 @include container
                 padding-left: calc(#{offset(2)} + var(--grid-gutter))
@@ -315,6 +314,13 @@
                     padding-right: var(--grid-gutter)
                     position: absolute
                     top: $hero-project-image-height
+        @include media-breakpoint-down(desktop)
+            .hero-text
+                padding-left: 0
+                padding-right: 0
+                margin-top: $spacing-1
+            .project-year
+                margin-top: $spacing-3
     .document-content
         .project-sidebar
             display: none

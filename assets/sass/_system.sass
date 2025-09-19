@@ -265,6 +265,15 @@ main
         .content
             figure
                 display: none
+    // image full width
+    &--with-image
+        .container
+            margin-left: 0
+            margin-right: 0
+            max-width: unset
+            width: 100%
+            .hero-text
+                @extend .container
 
 .document-content
     body:not(.full-width) &
