@@ -150,6 +150,10 @@ body:not(.full-width)
 // table
 .block-datatable
     table
+        tr:first-child td
+            border-top: none
+        tr:not(:first-child) td
+            border-top: 2px dotted var(--color-text)
         td
             &:first-child
                 font-weight: 600
@@ -172,5 +176,5 @@ body:not(.full-width)
         h2
             @include h4
         &[aria-expanded="false"]::after
-            border-bottom: 1px dotted $color-text
+            border-bottom: 1px dotted var(--color-text)
             
