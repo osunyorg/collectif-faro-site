@@ -17,7 +17,7 @@ params:
         layout: inline
         show_name: false
       options:
-        categories: true
+        categories: false
         image: true
         subtitle: true
         summary: false
