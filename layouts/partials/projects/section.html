@@ -36,7 +36,19 @@
             {{ end }}
             <tr>
               <td class="project-title">
-              <a href="{{ .RelPermalink }}" class="project-link">{{ .Title }}</a>
+                <a href="{{ .RelPermalink }}" class="project-link">{{ .Title }}</a>
+                {{ with .Params.image }}
+                  <div aria-hidden="true">
+                    {{ partial "projects/partials/project/media.html" (dict
+                        "image" .
+                        "sizes" (dict
+                          "mobile" 200
+                          "tablet" 200
+                          "desktop" 200
+                        )
+                      ) }}
+                  </div>
+                {{ end }}
               </td>
               <td {{ if eq $project_type "" -}} class="mobile-hidden" {{- end }}>
                 {{ with $project_type }}

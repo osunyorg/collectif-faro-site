@@ -140,6 +140,7 @@
         margin-right: 0
         padding-right: 0
         table.projects-list
+            position: relative
             border-bottom: 1px dashed var(--color-text-alt)
             th, td:not(.project-title)
                 @include meta
@@ -238,11 +239,27 @@
                     &, + tr
                         td
                             border-color: var(--color-accent)
+            .project-title
+                .media
+                    display: none
+                    position: absolute
+                    right: 0
+                    top: 100%
+                    img
+                        height: auto
+                        width: pxToRem(300)
     @include media-breakpoint-down(desktop)
         .table-responsive
             margin-right: 0
             padding-right: 0
-
+    @include media-breakpoint-up(desktop)
+        .table-responsive
+            tbody
+                tr:hover
+                    z-index: 2
+                    .project-title
+                        .media
+                            display: block
 .projects__page
     .hero
         .hero-text
@@ -272,6 +289,7 @@
                     margin-top: 0
             .container
                 padding: 0
+                width: 100%
             .project-year
                 margin-top: space(7)
             .hero-text
@@ -300,20 +318,21 @@
                     padding-right: var(--grid-gutter)
                     &::before
                         right: var(--grid-gutter)
-            &:not(.hero--with-image)
-                .project-year
-                    @include container
-                    time
-                        margin-left: offset(2)
+            .project-year
+                time
+                    margin-left: offset(2)
                 .hero-text
                     margin-top: $spacing-3
-            &.hero--with-image
-                .project-year
-                    left: 0
-                    padding-left: var(--grid-gutter)
-                    padding-right: var(--grid-gutter)
-                    position: absolute
-                    top: $hero-project-image-height
+            .project-year
+                left: 0
+                padding-left: var(--grid-gutter)
+                padding-right: var(--grid-gutter)
+                position: absolute
+                right: 0
+                top: $hero-project-image-height
+                time
+                    display: block
+                    @include container
         @include media-breakpoint-down(desktop)
             .hero-text
                 padding-left: 0
