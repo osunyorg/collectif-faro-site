@@ -34,9 +34,10 @@
                     flex: unset
                 .project-title
                     @include h4
+                    padding-bottom: space()
                 .project-subtitle,
                 .project-meta time
-                    @include body-text
+                    @include meta
                 .project-subtitle,
                 .project-meta time
                     color: var(--color-text)
@@ -390,6 +391,8 @@
     .projects--grid
         @include grid(3, desktop)
         grid-gap: $spacing-5 var(--grid-gutter) !important
+        .project:hover
+            --color-text: var(--color-accent)
         .project-content
             .project-title
                 @include h4

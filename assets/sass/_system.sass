@@ -108,6 +108,8 @@ header#document-header
                 height: calc(#{$header-logo-height-desktop} + #{space(5)})
         .logo
             @include stretched-link
+        .nav-search
+            padding-left: $spacing-2
 
 // menu overlay
 html.has-menu-opened body::after
@@ -115,40 +117,24 @@ html.has-menu-opened body::after
 
 // FOOTER
 footer#document-footer
-    padding-top: space(100)
-    padding-bottom: 0
-    border-bottom: 5px solid var(--color-text)
+    padding-top: space(130)
+    padding-bottom: space(5)
     .logo picture
         opacity: 0
-    @include media-breakpoint-down(desktop)
-        border-bottom: 3px solid var(--color-text)
-        display: flex
-        padding-top: $spacing-6
-    .container:first-child //Logo
+    > .container:first-child //Logo
         @include media-breakpoint-down(desktop)
             align-self: end
-        .footer-logo
-            @include media-breakpoint-up(desktop)
-                padding-bottom: 0
-                margin-bottom: -5px
-                position: absolute
-                bottom: 0%
-                left: 50%
-                transform: translateX(-50%)
-            img
-                @include media-breakpoint-down(desktop)
-                    height: space(25)
-        .footer-site
-            @include media-breakpoint-down(desktop)
-                margin-top: -3px
-    .container:last-child
+    > .container:last-child
+        margin-bottom: space(2)
+        @include media-breakpoint-up(desktop)
+            padding-top: 0
         @include media-breakpoint-down(desktop)
             display: flex
             flex-direction: column-reverse
             margin-top: 0
             row-gap: space()
-        margin-bottom: space(2)
         .footer-legals
+            order: 3
             @include media-breakpoint-down(desktop)
                 text-align: right
             .nav-legal
@@ -182,12 +168,53 @@ footer#document-footer
             .facebook::before
                 content: 'Fb'
     @include media-breakpoint-down(desktop)
+        border-bottom: 3px solid var(--color-text)
+        display: flex
+        padding-top: $spacing-6
         .container
             padding-left: 0
             .footer-social
                 row-gap: space()
                 li + li
                     margin-top: 0
+        > .container:first-child //Logo
+            .logo
+                position: absolute
+                bottom: -3px
+    @include media-breakpoint-up(desktop)
+        > .container:first-child //Logo
+            position: relative
+            padding-top: 0
+            padding-bottom: 0
+            margin-bottom: space(-7)
+            z-index: 1
+            &::after
+                content: ''
+                display: block
+                width: 100%
+                height: 5px
+                background: black
+            .footer-logo
+                padding-bottom: 0
+                position: absolute
+                bottom: 0
+                left: 50%
+                transform: translateX(-50%)
+            img
+                max-width: pxToRem(270)
+                max-height: pxToRem(150)
+                width: auto
+                height: auto
+        > .container:last-child
+            > .footer-social, > .footer-legals
+                position: relative
+                background: $color-background-brown
+                z-index: 3
+            > .footer-social
+                padding-right: space(7)
+            > .footer-legals
+                padding-left: space(7)
+        
 
 // MAIN
 main
@@ -268,10 +295,6 @@ main
     // image full width
     &--with-image
         .container
-            // margin-left: 0
-            // margin-right: 0
-            max-width: unset
-            // width: 100%
             .hero-text
                 @extend .container
 
