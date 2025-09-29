@@ -432,7 +432,7 @@
             &-categories
                 display: none
     // taxonomy 'fiche technique'
-    &.ancestor-taxonomy
+    &:where(:not(.ancestor-chapters))
         .projects
             .project
                 &-title
