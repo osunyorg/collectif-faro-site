@@ -134,8 +134,10 @@
             flex-wrap: wrap
             gap: space(3)
             justify-content: center
-            @include media-breakpoint-down(desktop)
-                flex-direction: column
+        @include media-breakpoint-down(desktop)
+            margin-left: auto
+            margin-right: auto
+            &, > div ul
                 align-items: center
     .table-responsive
         margin-right: 0
