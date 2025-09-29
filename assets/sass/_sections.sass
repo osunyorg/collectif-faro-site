@@ -125,18 +125,17 @@
         padding-bottom: 0
         margin-bottom: $spacing-2
     .taxonomies-list--inline
-        max-width: columns(10)
-        margin-left: auto
-        margin-right: auto
         &, > div ul
             align-items: baseline
             display: flex
             flex-wrap: wrap
             gap: space(3)
             justify-content: center
-        @include media-breakpoint-down(desktop)
+        @include media-breakpoint-up(desktop)
+            max-width: columns(10)
             margin-left: auto
             margin-right: auto
+        @include media-breakpoint-down(desktop)
             &, > div ul
                 align-items: center
     .table-responsive
