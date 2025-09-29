@@ -165,15 +165,14 @@
                 th
                     font-weight: 300
             tr
-                position: relative
+                position: relative !important
                 td:first-of-type
                     @include h6
+                    position: relative
                     a
                         @include stretched-link
                     @include media-breakpoint-up(desktop)
                         @include h4
-                    @supports (background: -webkit-named-image(i))
-                        position: relative
                     @include media-breakpoint-down(desktop)
                         border-top-style: dashed
                         border-top-width: 1px
@@ -190,6 +189,7 @@
                         width: calc(#{columns(5)} + var(--grid-gutter))
                 th:last-of-type,
                 td:last-of-type
+                    position: relative
                     padding-right: var(--grid-gutter)
                     text-align: right
                 td + td,
@@ -241,15 +241,18 @@
                     &, + tr
                         td
                             border-color: var(--color-accent)
-            .project-title
+            .project-image
+                display: none
+                position: absolute !important
+                right: 0
+                top: 100%
+                z-index: 10
                 .media
-                    display: none
-                    position: absolute
-                    right: 0
-                    top: 100%
                     img
+                        margin-top: 1px
                         height: auto
                         width: pxToRem(300)
+                        max-width: 30vw
     @include media-breakpoint-down(desktop)
         .table-responsive
             margin-right: 0
@@ -258,10 +261,10 @@
         .table-responsive
             tbody
                 tr:hover
+                    position: relative
                     z-index: 2
-                    .project-title
-                        .media
-                            display: block
+                    .project-image
+                        display: block
 .projects__page
     .hero
         .hero-text
