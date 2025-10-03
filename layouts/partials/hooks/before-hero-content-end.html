@@ -6,7 +6,7 @@
   {{ with $tags := site.GetPage "/projects_categories" }}
     <ul class="projects-categories">
       {{ range .Pages }}
-        {{ if and (eq .Params.is_taxonomy false) (not (in .Params.parent "projects_categories/chapitres")) }}
+        {{ if and (eq .Params.is_taxonomy false) (in .Params.parent "projects_categories/type") }}
           <li>
             <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
           </li>
