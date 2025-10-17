@@ -160,7 +160,13 @@ body:not(.full-width)
             &:last-child
                 text-align: right
 
-// bloc
+article
+    [class$="-title"] 
+        a
+            &::after
+                display: none !important
+
+// blocks
 .block.block-title
     @include in-page-with-sidebar
         &--classic h2
