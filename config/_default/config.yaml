@@ -30,6 +30,12 @@ params:
         position: hero
         show_name: false
   image_sizes:
+    blocks:
+      gallery:
+        grid:
+          mobile:   450
+          tablet:   700
+          desktop:  800
     sections:
       categories:
         hero:

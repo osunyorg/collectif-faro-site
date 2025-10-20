@@ -18,6 +18,10 @@
 // projects
 .page__home 
     .block-gallery--grid
+        @include media-breakpoint-down(desktop)
+            .gallery
+                figure
+                    flex: auto 0 1
         @include media-breakpoint-up(desktop)
             .gallery
                 max-width: calc(#{columns(10)} + #{pxToRem(110)})
