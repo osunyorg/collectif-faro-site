@@ -10,6 +10,8 @@ params:
     footer: '/assets/images/logo.svg'
   breadcrumb:
     position: none
+  blocks:
+    ignored: "block--class"
   projects:
     index:
       taxonomies:

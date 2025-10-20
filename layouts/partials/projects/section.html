@@ -12,8 +12,8 @@
         <thead>
           <tr>
             <th>{{ i18n "projects.index.table.title" }}</th>
-            <th>{{ i18n "projects.index.table.type" }}</th>
             <th>{{ i18n "projects.index.table.domain" }}</th>
+            <th>{{ i18n "projects.index.table.type" }}</th>
             <th>{{ i18n "projects.index.table.location" }}</th>
             <th>{{ i18n "projects.index.table.date" }}</th>
           </tr>
@@ -38,15 +38,15 @@
               <td class="project-title">
                 <a href="{{ .RelPermalink }}" class="project-link">{{ .Title }}</a>
               </td>
-              <td {{ if eq $project_type "" -}} class="mobile-hidden" {{- end }}>
-                {{ with $project_type }}
+              <td {{ if eq $project_domain "" -}} class="mobile-hidden" {{- end }}>
+                {{ with $project_domain }}
                   <a href="{{ .permalink }}" class="project-link">{{ .name }}</a>
                 {{ else }}
                   <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
                 {{ end }}
               </td>
-              <td {{ if eq $project_domain "" -}} class="mobile-hidden" {{- end }}>
-                {{ with $project_domain }}
+              <td {{ if eq $project_type "" -}} class="mobile-hidden" {{- end }}>
+                {{ with $project_type }}
                   <a href="{{ .permalink }}" class="project-link">{{ .name }}</a>
                 {{ else }}
                   <span class="sr-only">{{ i18n "projects.index.table.no_data" }}</span>
