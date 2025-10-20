@@ -16,8 +16,30 @@
             background-size: 100% 65vh
     
 // projects
-.page__home .block-projects
-    &--grid
+.page__home 
+    .block-gallery--grid
+        @include media-breakpoint-up(desktop)
+            .gallery
+                max-width: calc(#{columns(10)} + #{pxToRem(110)})
+                padding-top: pxToRem(230)
+                margin: auto
+                display: flex
+                flex-direction: row-reverse
+                flex-wrap: wrap
+                justify-content: end
+                align-items: start
+                gap: pxToRem(110) !important
+                figure
+                    width: columns(5)
+                    flex: auto 0 1
+                    display: block
+                    position: relative
+                    button, img
+                        width: 100%
+                        height: auto
+                    &:nth-child(odd)
+                        margin-top: pxToRem(-230)
+    .block-projects--grid
         .project
             .project-content
                 align-items: center
