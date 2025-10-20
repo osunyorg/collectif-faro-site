@@ -2,15 +2,20 @@
   <div class="project-year">
     <time datetime="{{ .Params.year }}">{{ .Params.year }}</time>
   </div>
-{{ else if eq .Type "projects_categories" }}
-  {{ with $tags := site.GetPage "/projects_categories" }}
+{{ else if and (eq .Type "projects_categories") (not .Params.is_taxonomy) }}
+  {{ $category := site.GetPage "/projects_categories" }}
+  {{ $tags := where $category.Pages ".Params.parent" .Params.parent }}
+
+  {{ if eq .Params.parent "/projects_categories/chapitres" }}
+    {{ $tags = where $category.Pages ".Params.parent" "/projects_categories/type" }}
+  {{ end }}
+
+  {{ with $tags }}
     <ul class="projects-categories">
-      {{ range .Pages }}
-        {{ if and (eq .Params.is_taxonomy false) (in .Params.parent "projects_categories/type") }}
-          <li>
-            <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
-          </li>
-        {{ end }}
+      {{ range . }}
+        <li>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+        </li>
       {{ end }}
     </ul>
   {{ end }}
