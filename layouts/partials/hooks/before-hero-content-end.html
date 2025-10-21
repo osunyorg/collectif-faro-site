@@ -7,7 +7,11 @@
   {{ $tags := where $category.Pages ".Params.parent" .Params.parent }}
 
   {{ if eq .Params.parent "/projects_categories/chapitres" }}
-    {{ $tags = where $category.Pages ".Params.parent" "/projects_categories/type" }}
+    {{/*  Turn hugo slug to bodyclass  */}}
+    {{ $id := replace .Slug "chapitres/" "page-" }}
+    {{/*  Then turn it to regex  */}}
+    {{ $regex := (printf `\b%s\b` $id) }}
+    {{ $tags = where $category.Pages ".Params.bodyclass" "like" $regex  }}
   {{ end }}
 
   {{ with $tags }}
