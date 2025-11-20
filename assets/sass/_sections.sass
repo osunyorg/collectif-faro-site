@@ -31,7 +31,7 @@
                 flex-direction: row-reverse
                 flex-wrap: wrap
                 justify-content: end
-                align-items: start
+                align-items: end
                 gap: pxToRem(110) !important
                 figure
                     width: columns(5)
@@ -42,7 +42,8 @@
                         width: 100%
                         height: auto
                     &:nth-child(odd)
-                        margin-top: pxToRem(-230)
+                        // margin-top: pxToRem(-230)
+                        transform: translateY(-150px)
     .block-projects--grid
         .project
             .project-content
