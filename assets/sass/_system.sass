@@ -5,14 +5,18 @@ body
 // HEADER
 header#document-header
     // TODO: use display none for mobile (adapt project section after this modification)
-    .logo
-        picture
-            opacity: 0
-        + figcaption
-            @include h3
-            line-height: 1
+    figure
+        position: relative
+        .logo
+            @include stretched-link
+            picture
+                opacity: 0
+            + figcaption
+                @include h3
+                line-height: 1
     figure:hover figcaption
         color: $color-accent
+        
     &:not(.is-sticky)
         figure
             top: space(5)
