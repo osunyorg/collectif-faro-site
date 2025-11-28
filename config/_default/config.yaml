@@ -50,7 +50,8 @@ params:
       projects:
         hero_single:
           desktop:  2400
-        grid:
-          mobile:   327
-          tablet:   555
-          desktop:  640x470
+        layouts:
+          grid:
+            mobile:   327
+            tablet:   555
+            desktop:  640x470

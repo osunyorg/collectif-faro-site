@@ -18,12 +18,11 @@ header#document-header
         color: $color-accent
         
     &:not(.is-sticky)
+        background: transparent
         figure
             top: space(5)
         .logo + figcaption
             @extend .sr-only
-    &:not(.is-sticky)
-        background: transparent
     &.is-sticky
         .logo img
             @extend .sr-only
@@ -90,8 +89,6 @@ header#document-header
                     li
                         a
                             @include h1
-                            padding-left: $spacing-3
-                            padding-right: $spacing-3
                         + li
                             margin-top: space(8)
             li
@@ -298,10 +295,10 @@ main
             figure
                 display: none
     // image full width
-    &--with-image
-        .container
-            .hero-text
-                @extend .container
+    // &--with-image
+    //     .container
+    //         .hero-text
+    //             @extend .container
 
 .toc-container
     display: none
