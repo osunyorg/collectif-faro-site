@@ -194,11 +194,6 @@ footer#document-footer
                 display: none
     .footer-social
         ul
-            align-items: baseline
-            display: flex
-            justify-content: flex-end
-            flex-wrap: wrap
-            gap: space(5)
             li
                 &::before
                     @include meta
@@ -219,13 +214,17 @@ footer#document-footer
         .container
             padding-left: 0
             .footer-social
-                row-gap: space()
+                text-align: right
+                li
+                    margin-left: auto
                 li + li
                     margin-top: 0
         > .container:first-child //Logo
             .logo
                 position: absolute
                 bottom: -3px
+        > .container:last-child // socials list row alignment
+            row-gap: 0
     @include media-breakpoint-up(desktop)
         > .container:first-child //Logo
             position: relative
@@ -250,6 +249,7 @@ footer#document-footer
                 max-height: pxToRem(150)
                 width: auto
                 height: auto
+        
         > .container:last-child
             > .footer-social, > .footer-legals
                 position: relative
@@ -259,6 +259,13 @@ footer#document-footer
                 padding-right: space(7)
             > .footer-legals
                 padding-left: space(7)
+        
+        .footer-social ul
+            align-items: baseline
+            display: flex
+            justify-content: flex-end
+            flex-wrap: wrap
+            gap: space(5)
         
 
 // MAIN
