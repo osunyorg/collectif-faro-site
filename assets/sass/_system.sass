@@ -92,17 +92,19 @@ header#document-header
             .primary-menu
                 height: 100svh
                 border-bottom: 3px solid $color-text
-                .container,
+                    
                 figure
-                    position: static
-                figure
-                    picture
-                        bottom: 0
+                    a
+                        @include stretched-link
+                    picture 
                         display: block
-                        pointer-events: none
-                        position: absolute
-                        left: 50%
-                        transform: translateX(-50%)
+                        img
+                            top: calc(100svh - #{$header-logo-height})
+                            display: block
+                            pointer-events: none
+                            position: absolute
+                            left: 50%
+                            transform: translateY(-50%)
         
         .menu
             padding-top: $spacing-2
