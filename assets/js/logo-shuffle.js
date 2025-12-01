@@ -2,35 +2,33 @@ class LogoShuffle {
     constructor () {
         this.logoContainers = document.querySelectorAll('.js-logo-shuffle');
 
-        if (!this.logoContainers || window.innerWidth <= 992 ) {
+        if (!this.logoContainers ) {
             return;
         }
 
-        this.listen();
+        this.init();
     }
 
-    listen () {
-        this.removeLogoOpacity();
-        this.getImagesUrl();
+    init () {
+        this.logoContainers.forEach(function (container) {
+            this.removeLogoOpacity(container);
+            this.getImagesUrl(container);
+        }, this);
     }
 
-    getImagesUrl() {
+    getImagesUrl(container) {
         let imageIndex = Math.floor(Math.random() * 5) + 1
         let imageUrl = `/assets/images/logos/logo_${imageIndex}.svg`;
-        this.createImage(imageUrl);
+        this.createImage(container, imageUrl);
     }
 
-    removeLogoOpacity () {
-        this.logoContainers.forEach(function (container) {
-            container.style.opacity = 1;
-        }, this);
+    removeLogoOpacity (container) {
+        container.style.opacity = 1;
     }
 
-    createImage (url) {
-        this.logoContainers.forEach(function (container) {
-            let image = container.querySelector('img');
-            image.src = url;
-        }, this);
+    createImage (container, url) {
+        let image = container.querySelector('img');
+        image.src = url;
     }
 }
 
