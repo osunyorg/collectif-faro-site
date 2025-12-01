@@ -1,7 +1,8 @@
 class LogoShuffle {
     constructor () {
         this.logoContainers = document.querySelectorAll('.js-logo-shuffle');
-        if (!this.logoContainers) {
+
+        if (!this.logoContainers || window.innerWidth <= 992 ) {
             return;
         }
 

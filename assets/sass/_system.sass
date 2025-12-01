@@ -16,16 +16,7 @@ header#document-header
                 line-height: 1
     figure:hover figcaption
         color: $color-accent
-        
-    &:not(.is-sticky)
-        background: transparent
-        figure
-            top: space(5)
-        .logo + figcaption
-            @extend .sr-only
-    &.is-sticky
-        .logo img
-            @extend .sr-only
+    
     .primary-menu
         padding-top: space(5)
         padding-bottom: space(4)
@@ -74,13 +65,33 @@ header#document-header
     .header-button
         span:first-of-type
             @extend .sr-only
+    
     @include media-breakpoint-down(desktop)
         .primary-menu
-            padding-top: space(3)
+            padding-top: space(10)
+            > .container
+                align-items: flex-end
+            
+            figure
+                picture
+                    display: none
+                .logo + figcaption
+                    @include h5
+
+            .header-button
+                font-size: space(6)
+                span:last-child::before
+                    @include icon-site('menu')
+                    margin-bottom: space(-1)
+                &[aria-expanded="true"]
+                    span:last-child::before
+                        @include icon-site('close')
+        
         html.has-menu-opened &
             .primary-menu
                 background-image: $header-radiant-background
                 height: 100vh
+        
         .menu
             #dropdown-réalisations
                 display: none
@@ -104,10 +115,26 @@ header#document-header
             .search-button--primary
                 width: auto
                 margin: auto
+
+            .dropdown-menu
+                padding-top: 12svh
+                .nav-level-2 
+                    li + li
+                        margin-top: space(9)
+    
     @include media-breakpoint-up(desktop)
         html.has-menu-opened &:not(.is-sticky)
             > nav
                 height: calc(#{$header-logo-height-desktop} + #{space(5)})
+        &:not(.is-sticky)
+            background: transparent
+            figure
+                top: space(5)
+            .logo + figcaption
+                @include visually-hidden
+        &.is-sticky
+            .logo img
+                @include visually-hidden
         .logo
             @include stretched-link
         .nav-search

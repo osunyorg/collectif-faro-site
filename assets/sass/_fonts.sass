@@ -9,3 +9,17 @@
 
 @include font-face("Faro", faro-webfont, $exts: (woff), $style: regular)
 @include font-face("Faro-Sign", faro_signes-webfont, $style: regular)
+
+// Icons
+@font-face
+    font-display: block
+    font-family: 'Icons-site'
+    font-style: normal
+    font-weight: 400
+    src: url('/assets/fonts/icons-site/icomoon.woff') format("woff"), url('/assets/fonts/icons-site/icomoon.eot') format("eot"), url('/assets/fonts/icons-site/icomoon.tsvgtf') format("svg")
+
+@mixin icon-site($icon)
+    @include icon
+    content: map-get($icons-site, $icon)
+    font-family: 'Icons-site'
+    font-size: inherit
