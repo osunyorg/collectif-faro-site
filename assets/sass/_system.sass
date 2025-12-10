@@ -72,6 +72,8 @@ header#document-header
                 align-items: flex-end
             
             figure
+                a
+                    @include stretched-link
                 picture
                     display: none
                 .logo + figcaption
@@ -94,8 +96,6 @@ header#document-header
                 border-bottom: 3px solid $color-text
                     
                 figure
-                    a
-                        @include stretched-link
                     picture 
                         display: block
                         img
