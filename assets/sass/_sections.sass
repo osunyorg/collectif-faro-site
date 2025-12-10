@@ -16,10 +16,11 @@
             background-size: 100% 65vh
     
 // projects
-.page__home 
+.page__home
     .block-gallery--grid
         @include media-breakpoint-down(desktop)
             .gallery
+                justify-content: center
                 figure
                     flex: auto 0 1
         @include media-breakpoint-up(desktop)
@@ -114,7 +115,10 @@
                     width: columns(5)
                     &:nth-child(odd)
                         margin-top: pxToRem(-230)
-
+    .block-categories
+        @include media-breakpoint-up(desktop)
+            .projects_category-title
+                font-size: Min(var(--h2-size), 3.2vw)
 // projects
 .projects__section,
 .projects__page,
