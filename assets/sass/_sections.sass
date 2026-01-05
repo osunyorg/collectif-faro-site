@@ -378,9 +378,9 @@
                 margin-top: $spacing-3
     .document-content
         .project-sidebar
-            display: none
+            @include sr-only
         .block-siblings-navigation
-            display: none
+            @include sr-only
     // others projects block
     .blocks .block
         &.block-projects--grid
@@ -522,8 +522,6 @@
 
 // 'à propos' / 'about' page
 .page-about
-    .toc-container
-        @extend .sr-only
     &:not(.full-width)
         .block-organizations
             border-top: 1px dashed $color-text

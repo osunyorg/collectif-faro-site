@@ -354,8 +354,14 @@ main
     //         .hero-text
     //             @extend .container
 
-.toc-container
-    display: none
+// toc
+body
+    &:not(.full-width)
+        .toc-container
+            @extend .sr-only
+    &.full-width
+        .toc-cta
+            @extend .sr-only
 
 .document-content
     body:not(.full-width) &
