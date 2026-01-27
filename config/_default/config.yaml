@@ -6,7 +6,6 @@ params:
   search:
     active: false
   debug:
-    active: true
     productionUrl: "https://www.collectif-faro.fr"
   logo:
     header: '/assets/images/logo.svg'
