@@ -2,46 +2,63 @@
 title: Menu principal
 items:
 - title: Réalisations
+  slug: realisations
   target: "/realisations/"
   kind: page
   new_tab: false
   children:
   - title: Construire l'espace habité
+    slug: construire-l-espace-habite
     target: "/realisations/chapitres/construire-lespace-habite"
     kind: url
     new_tab: false
     children: []
+    descendants_targets: []
   - title: Penser l'urbain
+    slug: penser-l-urbain
     target: "/realisations/chapitres/penser-lurbain"
     kind: url
     new_tab: false
     children: []
+    descendants_targets: []
   - title: Produire des connaissances
+    slug: produire-des-connaissances
     target: "/realisations/chapitres/produire-des-connaissances"
     kind: url
     new_tab: false
     children: []
+    descendants_targets: []
+  descendants_targets:
+  - "/realisations/chapitres/construire-lespace-habite"
+  - "/realisations/chapitres/penser-lurbain"
+  - "/realisations/chapitres/produire-des-connaissances"
   path: "/projects"
   file: content/fr/projects/_index.html
 - title: Index
+  slug: index
   target: "/realisations/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/projects"
   file: content/fr/projects/_index.html
 - title: Démarche
+  slug: demarche
   target: "/demarche/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/demarche"
   file: content/fr/pages/demarche/_index.html
 - title: À propos
+  slug: a-propos
   target: "/a-propos/"
   kind: page
   new_tab: false
   children: []
+  descendants_targets: []
   path: "/pages/a-propos"
   file: content/fr/pages/a-propos/_index.html
 
