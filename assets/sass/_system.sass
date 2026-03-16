@@ -126,11 +126,14 @@ header#document-header
                 text-align: center
                 &:not(:last-child)
                     border: none
-            
             > ul > li
                 a
                     @include lead-hero
                     padding: 0
+                    justify-content: center
+                    + .dropdown-menu
+                        margin-top: $spacing-2
+                        padding-bottom: 0
                 + li:not(.nav-search)
                     margin-top: space(5)
             .search-button--primary
@@ -140,8 +143,7 @@ header#document-header
             .dropdown-menu
                 .nav-level-2 
                     li + li
-                        margin-top: space(9)
-    
+                        margin-top: space(3)
     @include media-breakpoint-up(desktop)
         html.has-menu-opened &:not(.is-sticky)
             > nav
