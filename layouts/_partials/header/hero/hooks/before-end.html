@@ -1,14 +1,14 @@
-{{ if and (eq .Type "projects") (eq .Kind "page") }}
+{{ if and (eq .context.Type "projects") (eq .context.Kind "page") }}
   <div class="project-year">
-    <time datetime="{{ .Params.year }}">{{ .Params.year }}</time>
+    <time datetime="{{ .context.Params.year }}">{{ .context.Params.year }}</time>
   </div>
-{{ else if and (eq .Type "projects_categories") (not .Params.is_taxonomy) }}
+{{ else if and (eq .context.Type "projects_categories") (not .context.Params.is_taxonomy) }}
   {{ $category := site.GetPage "/projects_categories" }}
-  {{ $tags := where $category.Pages ".Params.parent" .Params.parent }}
+  {{ $tags := where $category.Pages ".Params.parent" .context.Params.parent }}
 
-  {{ if eq .Params.parent "/projects_categories/chapitres" }}
+  {{ if eq .context.Params.parent "/projects_categories/chapitres" }}
     {{/*  Turn hugo slug to bodyclass  */}}
-    {{ $id := replace .Slug "chapitres/" "page-" }}
+    {{ $id := replace .context.Slug "chapitres/" "page-" }}
     {{/*  Then turn it to regex  */}}
     {{ $regex := (printf `\b%s\b` $id) }}
     {{ $tags = where $category.Pages ".Params.bodyclass" "like" $regex  }}

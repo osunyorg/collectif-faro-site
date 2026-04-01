@@ -116,13 +116,13 @@ body:not(.full-width)
 
 // features
 .block-features
-    li
-        align-items: center
-        gap: pxToRem(80)
-        @include media-breakpoint-down(desktop)
-            gap: pxToRem(0)
-            align-items: flex-start
-        div
+    .features
+        .feature
+            align-items: center
+            gap: pxToRem(80)
+            @include media-breakpoint-down(desktop)
+                gap: pxToRem(0)
+                align-items: flex-start
             .name
                 @include meta
                 font-size: $h4-size-desktop
@@ -130,22 +130,21 @@ body:not(.full-width)
                 margin-bottom: 0
                 @include media-breakpoint-down(desktop)
                     margin-bottom: $spacing-3
-        figure
-            display: flex
-            width: 100%
-            picture
-                width: columns(2)
-                padding: pxToRem(18) 0
-                filter: grayscale(1)
-                @include media-breakpoint-down(desktop)
-                    width: 50%
-                &.is-png
-                    img
-                        max-width: 100%
-                        margin: 0
-        + li
-            margin-top: 0
-            border-top: 1px dashed var(--color-text-alt)
+            figure
+                display: flex
+                picture
+                    width: columns(2)
+                    padding: pxToRem(18) 0
+                    filter: grayscale(1)
+                    @include media-breakpoint-down(desktop)
+                        width: 50%
+                    &.is-png
+                        img
+                            max-width: 100%
+                            margin: 0
+            + .feature
+                margin-top: 0
+                border-top: 1px dashed var(--color-text-alt)
 
 // table
 .block-datatable
