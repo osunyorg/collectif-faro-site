@@ -15,350 +15,350 @@ for = ["**/*.png", "**/*.jpg", "**/*.jpeg", "**/*.gif", "**/*.webp"]
 Cache-Control = "max-age=31536000, no-transform, public"
 
 [[redirects]]
-from = "/realisations/2014-bureaux-en-hauteur-1-1/index.html"
+from = "/realisations/2014-bureaux-en-hauteur-1-1/"
 to = "/realisations/2014-renovation-d-une-longere-rurale/"
 
 [[redirects]]
-from = "/realisations/2024-equipement-et-halle-communale/index.html"
+from = "/realisations/2024-equipement-et-halle-communale/"
 to = "/realisations/2025-equipement-et-halle-communale/"
 
 [[redirects]]
-from = "/projets/index.html"
+from = "/projets/"
 to = "/realisations/"
 
 [[redirects]]
-from = "/realisations/2022-bureaux-en-hauteur-2-1/index.html"
+from = "/realisations/2022-bureaux-en-hauteur-2-1/"
 to = "/realisations/2022-tiers-lieu-brasserie/"
 
 [[redirects]]
-from = "/realisations/2012-maison-double/index.html"
+from = "/realisations/2012-maison-double/"
 to = "/realisations/2012-maison-bois-double/"
 
 [[redirects]]
-from = "/realisations/2025-construire-sans-de-trahir-1-1-2-3/index.html"
+from = "/realisations/2025-construire-sans-de-trahir-1-1-2-3/"
 to = "/realisations/2024-biennale-d-architecture-du-tregor/"
 
 [[redirects]]
-from = "/realisations/2025-restaurant-scolaire-1/index.html"
+from = "/realisations/2025-restaurant-scolaire-1/"
 to = "/realisations/2025-accueil-de-loisirs-ecole-et-salle-communale/"
 
 [[redirects]]
-from = "/realisations/2025-restaurant-scolaire-2-2/index.html"
+from = "/realisations/2025-restaurant-scolaire-2-2/"
 to = "/realisations/2025-restaurant-scolaire-et-pole-enfance-jeunesse/"
 
 [[redirects]]
-from = "/realisations/2022-equipement-et-halle-communale/index.html"
+from = "/realisations/2022-equipement-et-halle-communale/"
 to = "/realisations/2025-equipement-et-halle-communale/"
 
 [[redirects]]
-from = "/realisations/2025-ecole-a-l-ombre-1-1/index.html"
+from = "/realisations/2025-ecole-a-l-ombre-1-1/"
 to = "/realisations/2025-rehabilitation-d-une-ecole/"
 
 [[redirects]]
-from = "/realisations/2011-programme-de-recherche-reha-puca/index.html"
+from = "/realisations/2011-programme-de-recherche-reha-puca/"
 to = "/realisations/2012-programme-de-recherche-reha-puca/"
 
 [[redirects]]
-from = "/realisations/2025-construire-sans-de-trahir-1/index.html"
+from = "/realisations/2025-construire-sans-de-trahir-1/"
 to = "/realisations/2025-pedagogie-au-chantier/"
 
 [[redirects]]
-from = "/realisations/2020-bureaux-en-hauteur-2/index.html"
+from = "/realisations/2020-bureaux-en-hauteur-2/"
 to = "/realisations/2016-la-maison-du-pin/"
 
 [[redirects]]
-from = "/projets/materiaux-bio-sources/index.html"
+from = "/projets/materiaux-bio-sources/"
 to = "/realisations/fiche-technique/materiaux-bio-sources/"
 
 [[redirects]]
-from = "/realisations/2022-realisation-test-urbain-1/index.html"
+from = "/realisations/2022-realisation-test-urbain-1/"
 to = "/realisations/2022-mutation-d-un-centre-bourg/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-2-3/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-2-3/"
 to = "/realisations/2025-chantiers-d-experiences-partagees/"
 
 [[redirects]]
-from = "/realisations/2014-bureaux-en-hauteur-3/index.html"
+from = "/realisations/2014-bureaux-en-hauteur-3/"
 to = "/realisations/2014-siege-social-et-halle-industrielle/"
 
 [[redirects]]
-from = "/realisations/2023-ecole-a-l-ombre-1-2/index.html"
+from = "/realisations/2023-ecole-a-l-ombre-1-2/"
 to = "/realisations/2023-logements-collectifs-creche/"
 
 [[redirects]]
-from = "/realisations/2025-restaurant-scolaire-2/index.html"
+from = "/realisations/2025-restaurant-scolaire-2/"
 to = "/realisations/2026-logements-collectifs-pension-de-famille/"
 
 [[redirects]]
-from = "/realisations/2014-bureaux-en-hauteur-1-1-1/index.html"
+from = "/realisations/2014-bureaux-en-hauteur-1-1-1/"
 to = "/realisations/2014-loft-et-cour-couverte/"
 
 [[redirects]]
-from = "/realisations/2022-une-ecole-sous-un-preau-1-1/index.html"
+from = "/realisations/2022-une-ecole-sous-un-preau-1-1/"
 to = "/realisations/2022-vingt-trois-logements-intermediaires/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir/index.html"
+from = "/realisations/2024-construire-sans-de-trahir/"
 to = "/realisations/2024-construire-sans-se-trahir/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-1-1/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-1-1/"
 to = "/realisations/2024-an-architecture-school-of-commons/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-1-1-2-1-1/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-1-1-2-1-1/"
 to = "/realisations/2024-enseignement-sciences-humaines-et-sociales/"
 
 [[redirects]]
-from = "/realisations/2024-restaurant-scolaire/index.html"
+from = "/realisations/2024-restaurant-scolaire/"
 to = "/realisations/2023-restaurant-scolaire/"
 
 [[redirects]]
-from = "/realisations/2025-construire-sans-de-trahir-2-3/index.html"
+from = "/realisations/2025-construire-sans-de-trahir-2-3/"
 to = "/realisations/2025-chantiers-d-experiences-partagees/"
 
 [[redirects]]
-from = "/projets/2019-ecole-maternelle-structure-bois/index.html"
+from = "/projets/2019-ecole-maternelle-structure-bois/"
 to = "/realisations/2012-ecole-maternelle-structure-bois/"
 
 [[redirects]]
-from = "/projets/construire-lespace-habite/index.html"
+from = "/projets/construire-lespace-habite/"
 to = "/realisations/chapitres/construire-lespace-habite/"
 
 [[redirects]]
-from = "/realisations/2015-ecole-maternelle-structure-bois/index.html"
+from = "/realisations/2015-ecole-maternelle-structure-bois/"
 to = "/realisations/2012-ecole-maternelle-structure-bois/"
 
 [[redirects]]
-from = "/realisations/2021-logements-et-bureaux-boisterre-crue-1/index.html"
+from = "/realisations/2021-logements-et-bureaux-boisterre-crue-1/"
 to = "/realisations/2021-logements-collectifs-bois-et-terre-crue/"
 
 [[redirects]]
-from = "/realisations/2012-bureaux-en-hauteur-2-1-1-2-4-1-1/index.html"
+from = "/realisations/2012-bureaux-en-hauteur-2-1-1-2-4-1-1/"
 to = "/realisations/2012-maison-bois-double/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-1-1-2-1/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-1-1-2-1/"
 to = "/realisations/2024-seminaire-de-recherche-polygonale/"
 
 [[redirects]]
-from = "/realisations/2018-bureaux-en-hauteur-1/index.html"
+from = "/realisations/2018-bureaux-en-hauteur-1/"
 to = "/realisations/2019-surelevation-faubourg/"
 
 [[redirects]]
-from = "/realisations/2025-construire-sans-de-trahir-2-2/index.html"
+from = "/realisations/2025-construire-sans-de-trahir-2-2/"
 to = "/realisations/2025-recherche-action-terre-crue/"
 
 [[redirects]]
-from = "/realisations/2014-logements-et-bureaux-boisterre-crue-2-1/index.html"
+from = "/realisations/2014-logements-et-bureaux-boisterre-crue-2-1/"
 to = "/realisations/2014-rehabilitation-grand-ensemble/"
 
 [[redirects]]
-from = "/realisations/2012-ecole-maternelle-structure-bois-2/index.html"
+from = "/realisations/2012-ecole-maternelle-structure-bois-2/"
 to = "/realisations/2012-extension-d-une-maison-periurbaine/"
 
 [[redirects]]
-from = "/projets/chapitres/construire-lespace-habite/index.html"
+from = "/projets/chapitres/construire-lespace-habite/"
 to = "/realisations/chapitres/construire-lespace-habite/"
 
 [[redirects]]
-from = "/realisations/2019-ecole-maternelle-structure-bois/index.html"
+from = "/realisations/2019-ecole-maternelle-structure-bois/"
 to = "/realisations/2012-ecole-maternelle-structure-bois/"
 
 [[redirects]]
-from = "/realisations/2024-exposition-materia/index.html"
+from = "/realisations/2024-exposition-materia/"
 to = "/realisations/2025-exposition-materia/"
 
 [[redirects]]
-from = "/realisations/2010-plan-guide-de-centre-bourg-1/index.html"
+from = "/realisations/2010-plan-guide-de-centre-bourg-1/"
 to = "/realisations/2012-densite-en-periurbain/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-1-1-2-1-1-1/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-1-1-2-1-1-1/"
 to = "/realisations/2024-enseignement-du-projet-d-architecture/"
 
 [[redirects]]
-from = "/realisations/2025-restaurant-scolaire-2-2-1/index.html"
+from = "/realisations/2025-restaurant-scolaire-2-2-1/"
 to = "/realisations/2025-ecole-et-cours-oasis/"
 
 [[redirects]]
-from = "/realisations/2011-maison-bois/index.html"
+from = "/realisations/2011-maison-bois/"
 to = "/realisations/2012-maison-bois/"
 
 [[redirects]]
-from = "/realisations/type/logement/index.html"
+from = "/realisations/type/logement/"
 to = "/realisations/type/logements/"
 
 [[redirects]]
-from = "/realisations/2014-plan-guide-de-centre-bourg-1-1/index.html"
+from = "/realisations/2014-plan-guide-de-centre-bourg-1-1/"
 to = "/realisations/2014-renouvellement-urbain/"
 
 [[redirects]]
-from = "/realisations/2013-construire-sans-de-trahir-2-3-1/index.html"
+from = "/realisations/2013-construire-sans-de-trahir-2-3-1/"
 to = "/realisations/2013-recherche-en-architecture/"
 
 [[redirects]]
-from = "/realisations/2025-construire-sans-de-trahir-1-1-2-1-1-1/index.html"
+from = "/realisations/2025-construire-sans-de-trahir-1-1-2-1-1-1/"
 to = "/realisations/2024-enseignement-du-projet-d-architecture/"
 
 [[redirects]]
-from = "/realisations/2014-bureaux-en-hauteur-1-1-1-1/index.html"
+from = "/realisations/2014-bureaux-en-hauteur-1-1-1-1/"
 to = "/realisations/2014-habitats-partages/"
 
 [[redirects]]
-from = "/realisations/2026-restaurant-scolaire-2/index.html"
+from = "/realisations/2026-restaurant-scolaire-2/"
 to = "/realisations/2026-logements-collectifs-pension-de-famille/"
 
 [[redirects]]
-from = "/realisations/2022-ecole-a-l-ombre-1/index.html"
+from = "/realisations/2022-ecole-a-l-ombre-1/"
 to = "/realisations/2025-ecole-a-l-ombre/"
 
 [[redirects]]
-from = "/realisations/2024-logements-et-bureaux-boisterre-crue-2/index.html"
+from = "/realisations/2024-logements-et-bureaux-boisterre-crue-2/"
 to = "/realisations/2024-logements-en-construction-hors-site/"
 
 [[redirects]]
-from = "/realisations/2020-construire-sans-de-trahir-1-1-2-1-1/index.html"
+from = "/realisations/2020-construire-sans-de-trahir-1-1-2-1-1/"
 to = "/realisations/2024-enseignement-sciences-humaines-et-sociales/"
 
 [[redirects]]
-from = "/realisations/2025-realisation-test-urbain/index.html"
+from = "/realisations/2025-realisation-test-urbain/"
 to = "/realisations/2024-resilience-urbaine/"
 
 [[redirects]]
-from = "/realisations/2025-construire-sans-de-trahir-1-1-1/index.html"
+from = "/realisations/2025-construire-sans-de-trahir-1-1-1/"
 to = "/realisations/2025-conferences-tables-rondes/"
 
 [[redirects]]
-from = "/realisations/2020-restaurant-scolaire-2-1-3/index.html"
+from = "/realisations/2020-restaurant-scolaire-2-1-3/"
 to = "/realisations/2020-logements-collectifs-et-locaux-d-activites/"
 
 [[redirects]]
-from = "/realisations/2013-bureaux-en-hauteur-1-1-1-1/index.html"
+from = "/realisations/2013-bureaux-en-hauteur-1-1-1-1/"
 to = "/realisations/2014-habitats-partages/"
 
 [[redirects]]
-from = "/realisations/2016-une-ecole-sous-un-preau-1/index.html"
+from = "/realisations/2016-une-ecole-sous-un-preau-1/"
 to = "/realisations/2016-quinze-logements-locatifs-sociaux/"
 
 [[redirects]]
-from = "/realisations/2021-restaurant-scolaire-2-1/index.html"
+from = "/realisations/2021-restaurant-scolaire-2-1/"
 to = "/realisations/2021-groupe-scolaire-ile-de-nantes/"
 
 [[redirects]]
-from = "/realisations/architecture/index.html"
+from = "/realisations/architecture/"
 to = "/realisations/domaine/architecture/"
 
 [[redirects]]
-from = "/projets/chapitres/index.html"
+from = "/projets/chapitres/"
 to = "/realisations/chapitres/"
 
 [[redirects]]
-from = "/realisations/2009-plan-guide-de-centre-bourg-1-1-1-1/index.html"
+from = "/realisations/2009-plan-guide-de-centre-bourg-1-1-1-1/"
 to = "/realisations/2009-volontariat-droit-au-logement/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-1-1-2/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-1-1-2/"
 to = "/realisations/2025-exposition-materia/"
 
 [[redirects]]
-from = "/realisations/2019-groupe-scolaire-rehabilite-1/index.html"
+from = "/realisations/2019-groupe-scolaire-rehabilite-1/"
 to = "/realisations/2023-groupe-scolaire-rehabilite-1/"
 
 [[redirects]]
-from = "/realisations/2012-plan-guide-de-centre-bourg-1/index.html"
+from = "/realisations/2012-plan-guide-de-centre-bourg-1/"
 to = "/realisations/2012-densite-en-periurbain/"
 
 [[redirects]]
-from = "/realisations/2022-restaurant-scolaire-1/index.html"
+from = "/realisations/2022-restaurant-scolaire-1/"
 to = "/realisations/2025-accueil-de-loisirs-ecole-et-salle-communale/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-2/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-2/"
 to = "/realisations/2025-rex-beton-de-chanvre/"
 
 [[redirects]]
-from = "/realisations/materiaux-bio-sources/index.html"
+from = "/realisations/materiaux-bio-sources/"
 to = "/realisations/fiche-technique/materiaux-bio-sources/"
 
 [[redirects]]
-from = "/realisations/2021-ecole-a-l-ombre-1-1-1/index.html"
+from = "/realisations/2021-ecole-a-l-ombre-1-1-1/"
 to = "/realisations/2021-maternelle-sous-les-arbres/"
 
 [[redirects]]
-from = "/realisations/2025-ecole-a-l-ombre-1-2-1/index.html"
+from = "/realisations/2025-ecole-a-l-ombre-1-2-1/"
 to = "/realisations/2025-logements-collectifs-bureaux-activites/"
 
 [[redirects]]
-from = "/realisations/2014-ecole-maternelle-structure-bois/index.html"
+from = "/realisations/2014-ecole-maternelle-structure-bois/"
 to = "/realisations/2012-ecole-maternelle-structure-bois/"
 
 [[redirects]]
-from = "/realisations/2019-bureaux-en-hauteur-1/index.html"
+from = "/realisations/2019-bureaux-en-hauteur-1/"
 to = "/realisations/2019-surelevation-faubourg/"
 
 [[redirects]]
-from = "/realisations/2021-bureaux-en-hauteur/index.html"
+from = "/realisations/2021-bureaux-en-hauteur/"
 to = "/realisations/2020-bureaux-en-hauteur/"
 
 [[redirects]]
-from = "/realisations/2024-realisation-test-urbain/index.html"
+from = "/realisations/2024-realisation-test-urbain/"
 to = "/realisations/2024-resilience-urbaine/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-1-1-2-3/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-1-1-2-3/"
 to = "/realisations/2024-biennale-d-architecture-du-tregor/"
 
 [[redirects]]
-from = "/realisations/2016-bureaux-en-hauteur-2/index.html"
+from = "/realisations/2016-bureaux-en-hauteur-2/"
 to = "/realisations/2016-la-maison-du-pin/"
 
 [[redirects]]
-from = "/realisations/2011-bureaux-en-hauteur-2-1-1-2-4-1-1-1/index.html"
+from = "/realisations/2011-bureaux-en-hauteur-2-1-1-2-4-1-1-1/"
 to = "/realisations/2012-maison-bois/"
 
 [[redirects]]
-from = "/realisations/2022-restaurant-scolaire-2-1-2/index.html"
+from = "/realisations/2022-restaurant-scolaire-2-1-2/"
 to = "/realisations/2022-groupe-scolaire-bois-terre-crue/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-2-1/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-2-1/"
 to = "/realisations/2024-systeme-participatif-de-garantie-innovation/"
 
 [[redirects]]
-from = "/realisations/2016-construire-sans-de-trahir-1-1-2-2/index.html"
+from = "/realisations/2016-construire-sans-de-trahir-1-1-2-2/"
 to = "/realisations/2016-la-biennale-di-venezia-2016/"
 
 [[redirects]]
-from = "/realisations/2021-bureaux-en-hauteur-2-1-1-1/index.html"
+from = "/realisations/2021-bureaux-en-hauteur-2-1-1-1/"
 to = "/realisations/2021-maison-de-l-habitat/"
 
 [[redirects]]
-from = "/realisations/2025-logements-et-bureaux-boisterre-crue/index.html"
+from = "/realisations/2025-logements-et-bureaux-boisterre-crue/"
 to = "/realisations/2022-logements-et-bureaux-boisterre-crue/"
 
 [[redirects]]
-from = "/realisations/2024-construire-sans-de-trahir-1-1-1/index.html"
+from = "/realisations/2024-construire-sans-de-trahir-1-1-1/"
 to = "/realisations/2025-conferences-tables-rondes/"
 
 [[redirects]]
-from = "/realisations/2025-ecole-a-l-ombre-1/index.html"
+from = "/realisations/2025-ecole-a-l-ombre-1/"
 to = "/realisations/2025-ecole-a-l-ombre/"
 
 [[redirects]]
-from = "/realisations/2025-construire-sans-de-trahir-2/index.html"
+from = "/realisations/2025-construire-sans-de-trahir-2/"
 to = "/realisations/2025-rex-beton-de-chanvre/"
 
 [[redirects]]
-from = "/realisations/2018-construire-sans-de-trahir-1-1-1-1/index.html"
+from = "/realisations/2018-construire-sans-de-trahir-1-1-1-1/"
 to = "/realisations/2018-relever-l-habite-retourner-voir/"
 
 [[redirects]]
-from = "/realisations/2018-restaurant-scolaire-2-1-1/index.html"
+from = "/realisations/2018-restaurant-scolaire-2-1-1/"
 to = "/realisations/2018-groupe-scolaire-en-eco-quartier/"
 
 [[redirects]]
-from = "/realisations/2016-bureaux-en-hauteur-2-1/index.html"
+from = "/realisations/2016-bureaux-en-hauteur-2-1/"
 to = "/realisations/2022-tiers-lieu-brasserie/"
 
