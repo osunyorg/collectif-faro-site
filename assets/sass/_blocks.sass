@@ -122,6 +122,17 @@ body:not(.full-width)
                 @include meta
                 font-size: $h4-size-desktop
                 font-weight: 300
+            
+            figure
+                picture
+                    filter: grayscale(1)
+                
+                &.media--icon
+                    img
+                        max-width: columns(7)
+                        margin: 0
+                        @include media-breakpoint-up(desktop)
+                            max-width: 100%
 
     &--list
         .features
@@ -137,11 +148,6 @@ body:not(.full-width)
                     picture
                         width: columns(2)
                         padding: pxToRem(18) 0
-                        filter: grayscale(1)
-                    &.media--icon
-                        img
-                            max-width: 100%
-                            margin: 0
                 
                 + .feature
                     margin-top: 0
@@ -150,8 +156,6 @@ body:not(.full-width)
                 @include media-breakpoint-down(desktop)
                     gap: pxToRem(0)
                     align-items: flex-start
-                    .name
-                        margin-bottom: $spacing-3
                     figure
                         picture
                             width: 50%
