@@ -118,33 +118,47 @@ body:not(.full-width)
 .block-features
     .features
         .feature
-            align-items: center
-            gap: pxToRem(80)
-            @include media-breakpoint-down(desktop)
-                gap: pxToRem(0)
-                align-items: flex-start
             .name
                 @include meta
                 font-size: $h4-size-desktop
                 font-weight: 300
-                margin-bottom: 0
-                @include media-breakpoint-down(desktop)
-                    margin-bottom: $spacing-3
+            
             figure
-                display: flex
                 picture
-                    width: columns(2)
-                    padding: pxToRem(18) 0
                     filter: grayscale(1)
-                    @include media-breakpoint-down(desktop)
-                        width: 50%
-                    &.is-png
-                        img
+                
+                &.media--icon
+                    img
+                        max-width: columns(7)
+                        margin: 0
+                        @include media-breakpoint-up(desktop)
                             max-width: 100%
-                            margin: 0
-            + .feature
-                margin-top: 0
-                border-top: 1px dashed var(--color-text-alt)
+
+    &--list
+        .features
+            .feature
+                align-items: center
+                border-bottom: 0
+                gap: pxToRem(80)
+                &:first-child
+                    padding-top: 0
+                
+                figure
+                    display: flex
+                    picture
+                        width: columns(2)
+                        padding: pxToRem(18) 0
+                
+                + .feature
+                    margin-top: 0
+                    border-top: 1px dashed var(--color-text-alt)
+
+                @include media-breakpoint-down(desktop)
+                    gap: pxToRem(0)
+                    align-items: flex-start
+                    figure
+                        picture
+                            width: 50%
 
 // table
 .block-datatable
