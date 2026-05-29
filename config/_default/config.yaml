@@ -26,13 +26,15 @@ params:
         subtitle: true
         summary: false
         year: true
-
     share_links:
       enabled: false
     single:
-      taxonomies:
+      meta:
         position: hero
-        show_name: false
+        options:
+          reading_time: false
+          with_labels: false
+          year: false
   image_sizes:
     blocks:
       gallery:
