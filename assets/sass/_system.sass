@@ -62,7 +62,7 @@ header#document-header
         html.has-menu-opened &
             background: $color-background
     .header-button
-        span:first-of-type
+        .button-title
             @extend .sr-only
     
     @include media-breakpoint-down(desktop)
@@ -111,7 +111,7 @@ header#document-header
             padding-right: $spacing-1
             // add logo height to calc
             max-height: calc(var(--header-menu-max-height) - #{$spacing-6})
-            #dropdown-réalisations
+            #dropdown-realisations
                 display: none
                 + .dropdown-menu
                     display: block
