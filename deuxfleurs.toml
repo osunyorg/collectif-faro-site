@@ -143,6 +143,10 @@ from = "/realisations/2024-construire-sans-de-trahir-1-1-2-1/index.html"
 to = "/realisations/2024-seminaire-de-recherche-polygonale/"
 
 [[redirects]]
+from = "/realisations/2020-logements-collectifs-et-locaux-d-activites/index.html"
+to = "/realisations/2026-logements-collectifs-et-locaux-d-activites/"
+
+[[redirects]]
 from = "/realisations/2018-bureaux-en-hauteur-1/index.html"
 to = "/realisations/2019-surelevation-faubourg/"
 
@@ -232,7 +236,7 @@ to = "/realisations/2025-conferences-tables-rondes/"
 
 [[redirects]]
 from = "/realisations/2020-restaurant-scolaire-2-1-3/index.html"
-to = "/realisations/2020-logements-collectifs-et-locaux-d-activites/"
+to = "/realisations/2026-logements-collectifs-et-locaux-d-activites/"
 
 [[redirects]]
 from = "/realisations/2013-bureaux-en-hauteur-1-1-1-1/index.html"
